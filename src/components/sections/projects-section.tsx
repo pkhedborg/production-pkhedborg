@@ -6,17 +6,47 @@ import ProjectGrid from '../ui/ProjectGrid';
 import useSanityProjects from '../../sanity/hooks/useSanityProjects';
 import SkeletonLoader from '../ui/SkeletonLoader';
 import Image from 'next/image';
+import { useParams } from "next/navigation";
+import { useSanityArticle } from "../../sanity/hooks/useSanityArticle";
+
+interface Project {
+  _id: string;
+  headline: string;
+  excerpt: string;
+  mainImage: {
+    image: {
+      asset: {
+        url: string;
+      };
+    };
+  };
+  isHeaderArticle?: boolean;
+}
+
+interface ArticleHeader {
+  _id: string;
+  headline: string;
+  excerpt: string;
+  mainImage: {
+    image: {
+      asset: {
+        url: string;
+      };
+    };
+  };
+}
 
 const ProjectSection = () => {
+  const { slug } = useParams();
   const { projects, isLoading: isProjectsLoading, error: projectsError } = useSanityProjects();
   const { articleHeader, isLoading: isHeaderLoading, error: headerError } = useSanityArticleHeader();
+  const { articles, isLoading, error } = useSanityArticle();
 
   // Debug logs
   console.log('Projects:', projects);
   console.log('Article Header:', articleHeader);
   console.log('Loading States:', { isProjectsLoading, isHeaderLoading });
   console.log('Errors:', { projectsError, headerError });
-
   // Filter to show only non-header articles
   const carouselProjects = projects?.filter(project => !project.isHeaderArticle) || [];
   console.log('Filtered Carousel Projects:', carouselProjects);
@@ -27,6 +57,17 @@ const ProjectSection = () => {
     return text.length > 400 ? `${text.slice(0, 400)}...` : text;
   };
 
+  // Find the header article
+  const headerArticle = articles?.find(article => article.isHeaderArticle);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
   return (
     <section className="project-section py-16 bg-[#252932] text-white">
       <div className="container mx-auto max-w-[2400px] py-10 px-4">
@@ -35,20 +76,20 @@ const ProjectSection = () => {
           <div className="w-full lg:w-1/2">
             <SkeletonLoader />
           </div>
-        ) : articleHeader ? (
+        ) : headerArticle ? (
           <div className="flex flex-col-reverse lg:flex-row w-full gap-8">
             {/* Content Section */}
             <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 leading-tight">
-                {articleHeader.headline}
+                {headerArticle.headline}
               </h2>
               <p className="text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 max-w-[600px] leading-relaxed px-4 sm:px-0">
-                {truncateText(articleHeader.excerpt)}
+                {truncateText(headerArticle?.excerpt || '')}
               </p>
 
               <div className="flex justify-center lg:justify-start">
-                <Link 
-                  href={`/article/${articleHeader._id}`}
+                <Link
+                  href={`/article/${headerArticle._id}`}
                   className="text-red-500 font-semibold hover:text-red-400 inline-flex items-center"
                 >
                   Learn more →
@@ -60,10 +101,10 @@ const ProjectSection = () => {
             <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
               <div className="relative w-full aspect-[16/10] group">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                {articleHeader.mainImage && (
+                {headerArticle.mainImage && (
                   <Image
-                    src={articleHeader.mainImage.image.asset.url}
-                    alt={articleHeader.headline}
+                    src={headerArticle.mainImage.image.asset.url}
+                    alt={headerArticle.headline}
                     fill
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                     sizes="(max-width: 768px) 100vw, 600px"

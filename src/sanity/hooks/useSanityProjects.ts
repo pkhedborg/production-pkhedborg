@@ -12,6 +12,7 @@ interface Project {
       };
     };
   };
+  isHeaderArticle: boolean;
 }
 
 interface SanityError {
