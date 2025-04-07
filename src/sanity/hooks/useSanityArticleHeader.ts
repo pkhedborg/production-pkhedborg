@@ -1,59 +1,47 @@
 import { useEffect, useState } from 'react'
 import { client } from '../lib/sanity'
 
-export default function useSanityArticleHeader() {
-  const [articleHeader, setArticleHeader] = useState<any>(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<Error | null>(null)
+interface ArticleHeader {
+  _id: string;
+  title: string;
+  description: string;
+  slug: string;
+  image: string;
+}
+
+interface SanityError {
+  message: string;
+}
+
+const useStoryblokArticleHeader = () => {
+  const [articleHeader, setArticleHeader] = useState<ArticleHeader | null>(null)
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [error, setError] = useState<SanityError | null>(null)
 
   useEffect(() => {
-    const query = `*[_type == "article" && isHeaderArticle == true][0]{
-      _id,
-      headline,
-      excerpt,
-      mainImage {
-        image {
-          asset-> {
+    const fetchArticleHeader = async () => {
+      try {
+        const result = await client.fetch(`
+          *[_type == "article" && isHeaderArticle == true][0] {
             _id,
-            url
-          },
-          hotspot,
-          crop
-        },
-        source {
-          name,
-          url
-        }
-      },
-      mediaContent {
-        type,
-        image {
-          asset {
-            _id,
-            url
-          },
-          source {
-            name,
-            url
+            title,
+            description,
+            "slug": slug.current,
+            "image": mainImage.image.asset->url
           }
-        },
-        youtubeUrl
-      },
-      genres,
-      publishedAt,
-      readingTime
-    }`
+        `)
+        setArticleHeader(result)
+      } catch (err) {
+        setError({ message: (err as Error).message })
+      } finally {
+        setIsLoading(false)
+      }
+    }
 
-    client.fetch(query)
-      .then(data => {
-        setArticleHeader(data)
-        setIsLoading(false)
-      })
-      .catch(err => {
-        setError(err)
-        setIsLoading(false)
-      })
+    fetchArticleHeader()
   }, [])
 
   return { articleHeader, isLoading, error }
 }
+
+export default useStoryblokArticleHeader

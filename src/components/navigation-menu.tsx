@@ -1,11 +1,25 @@
 // No "use client" directive needed
 
-export function NavigationMenu() {
+import Link from 'next/link';
+import { useState } from 'react';
+
+interface NavigationMenuProps {
+  menuItems: {
+    text: string;
+    link: string;
+  }[];
+}
+
+const NavigationMenu = ({ menuItems }: NavigationMenuProps) => {
   return (
     <nav>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/contact">Contact</Link>
+      {menuItems.map((item, index) => (
+        <Link key={index} href={item.link}>
+          {item.text}
+        </Link>
+      ))}
     </nav>
   );
-}
+};
+
+export default NavigationMenu;

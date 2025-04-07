@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import NumberTicker from "@/components/ui/number-ticker";
 import HistoryImage from "@/components/Images/OptimizedHistoryImage";

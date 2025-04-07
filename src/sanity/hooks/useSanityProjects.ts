@@ -1,64 +1,48 @@
 import { useEffect, useState } from 'react'
 import { client } from '../lib/sanity'
 
+interface Project {
+  _id: string;
+  headline: string;
+  excerpt: string;
+  mainImage: {
+    image: {
+      asset: {
+        url: string;
+      };
+    };
+  };
+}
+
+interface SanityError {
+  message: string;
+}
+
 export default function useSanityProjects() {
-  const [projects, setProjects] = useState<any[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<Error | null>(null)
+  const [projects, setProjects] = useState<Project[]>([])
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [error, setError] = useState<SanityError | null>(null)
 
   useEffect(() => {
-    // Updated query to include all necessary fields and the URL for the image
-    const query = `*[_type == "article"] {
-      _id,
-      headline,
-      excerpt,
-      mainImage {
-        image {
-          asset-> {
+    const fetchProjects = async () => {
+      try {
+        const result = await client.fetch(`
+          *[_type == "article" && !(_id in path("drafts.**"))] | order(publishedAt desc) {
             _id,
-            url
-          },
-          hotspot,
-          crop
-        },
-        source {
-          name,
-          url
-        }
-      },
-      mediaContent {
-        type,
-        image {
-          asset {
-            _id,
-            url
-          },
-          source {
-            name,
-            url
+            headline,
+            excerpt,
+            mainImage
           }
-        },
-        youtubeUrl
-      },
-      isHeaderArticle,
-      publishedAt,
-      readingTime
-    }`
+        `)
+        setProjects(result)
+      } catch (err) {
+        setError({ message: (err as Error).message })
+      } finally {
+        setIsLoading(false)
+      }
+    }
 
-    console.log('Fetching with query:', query)
-    
-    client.fetch(query)
-      .then(data => {
-        console.log('Received data:', data)
-        console.log('Full data structure:', JSON.stringify(data, null, 2))
-        setProjects(data)
-        setIsLoading(false)
-      })
-      .catch(err => {
-        console.error('Error fetching projects:', err)
-        setError(err)
-        setIsLoading(false)
-      })
+    fetchProjects()
   }, [])
 
   return { projects, isLoading, error }

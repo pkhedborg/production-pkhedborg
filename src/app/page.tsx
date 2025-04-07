@@ -153,8 +153,6 @@ const HeroSection = () => {
 };
 
 const Home = () => {
-  const isMobile = useIsMobile();
-
   return (
     <LazyMotion features={domAnimation}>
       <motion.div 
@@ -183,7 +181,7 @@ const Home = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8 max-[640px]:w-screen max-[640px]:relative max-[640px]:left-[50%] max-[640px]:right-[50%] max-[640px]:mr-[-50vw] max-[640px]:ml-[-50vw]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <ProjectSection />
           </div>
         </motion.section>
