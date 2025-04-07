@@ -1,4 +1,4 @@
-import { defineType, defineField, PortableTextBlock } from 'sanity'
+import { defineType, defineField } from 'sanity'
 
 interface PrepareProps {
   title?: string;
