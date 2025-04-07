@@ -1,17 +1,5 @@
 import { defineType, defineField } from 'sanity'
 
-interface PrepareProps {
-  title?: string;
-  subtitle?: string | Date;
-  media?: {
-    asset: {
-      _ref: string;
-      _type: string;
-    };
-  };
-  isHeader?: boolean;
-}
-
 export default defineType({
   name: 'article',
   title: 'Article',
