@@ -7,82 +7,20 @@ import { useSanityArticle } from "../../sanity/hooks/useSanityArticle";
 import useSanityProjects from "../../sanity/hooks/useSanityProjects";
 import { PortableText, PortableTextComponents } from '@portabletext/react';
 
-interface SanityImage {
-  _type: 'image';
-  asset: {
-    _ref: string;
-    _type: 'reference';
-    url: string;
-  };
-  hotspot?: {
-    x: number;
-    y: number;
-    height: number;
-    width: number;
-  };
-  crop?: {
-    top: number;
-    bottom: number;
-    left: number;
-    right: number;
-  };
-}
-
-interface ImageSource {
-  name: string;
-  url?: string;
-}
-
-interface MediaContent {
-  type: 'youtube' | 'image';
-  image?: {
-    asset: {
-      _id: string;
-      url: string;
-    };
-    source?: ImageSource;
-  };
-  youtubeUrl?: string;
-}
-
-interface Candidate {
-  name: string;
-  occupation: string;
-  applicationPurpose: string;
-}
-
-interface Article {
-  _id: string;
-  headline: string;
-  excerpt?: string;
-  mainContent?: {
-    _type: string;
-    [key: string]: unknown;
-  }[];
-  mainImage?: {
-    image: SanityImage;
-    source?: ImageSource;
-  };
-  mediaContent?: MediaContent;
-  publishedAt: string;
-  genres?: string[];
-  readingTime?: number;
-  candidate?: Candidate;
-  isHeaderArticle: boolean;
-}
-
 interface PortableTextProps {
   children?: React.ReactNode;
 }
 
 const ArticleSection = () => {
   const { slug } = useParams();
-  
   const { projects, isLoading: isProjectsLoading, error: projectsError } = useSanityProjects();
   const { articles, isLoading, error } = useSanityArticle();
 
   // Find the article that matches the slug
   const article = articles?.find(article => article._id === slug);
+  
+  // Filter out the current article from related articles
+  const relatedProjects = projects?.filter(project => project._id !== slug) || [];
 
   if (!slug || typeof slug !== "string") {
     return <div>Error: Missing or invalid article slug.</div>;
@@ -180,7 +118,7 @@ const ArticleSection = () => {
             <p className="mb-6">{children}</p>
             {isBreakPoint && article?.mediaContent && (
               <>
-                {/* YouTube Video */}
+                {/* Only show YouTube videos in content */}
                 {article.mediaContent.type === 'youtube' && article.mediaContent.youtubeUrl && (
                   <div className="my-12">
                     <iframe
@@ -195,8 +133,10 @@ const ArticleSection = () => {
                   </div>
                 )}
                 
-                {/* Additional Image */}
-                {article.mediaContent.type === 'image' && article.mediaContent.image?.asset?.url && (
+                {/* Only show image if it's different from the hero image */}
+                {article.mediaContent.type === 'image' && 
+                  article.mediaContent.image?.asset?.url && 
+                  article.mediaContent.image.asset.url !== article.mainImage?.image.asset.url && (
                   <figure className="my-12">
                     <div className="relative w-full aspect-[16/9]">
                       <Image
@@ -221,9 +161,6 @@ const ArticleSection = () => {
       }
     }
   };
-
-  // Filter out the current article from related articles
-  const relatedProjects = projects?.filter(project => project._id !== slug) || [];
 
   return (
     <div className="article-container relative">
@@ -375,7 +312,7 @@ const ArticleSection = () => {
         <h2 className="text-2xl font-bold text-center mb-12">More Articles</h2>
         {isProjectsLoading && <div>Loading more articles...</div>}
         {projectsError && <div>Error loading articles: {projectsError.message}</div>}
-        {!isProjectsLoading && relatedProjects.length > 0 && (
+        {!isProjectsLoading && projects && projects.length > 0 && (
           <ProjectGrid projects={relatedProjects} />
         )}
       </div>
