@@ -1,0 +1,265 @@
+{
+    "application": {
+      "heroTitle": "Demander une subvention",
+      "heroDescription": "Rejoignez la mission de notre fondation pour soutenir la recherche, l'éducation et les arts. Découvrez comment vous pouvez demander un financement.",
+      "learnMoreButton": "En savoir plus",
+      "processTitle": "Le processus de demande",
+      "processDescription": "Notre fondation offre des subventions aux individus dans divers domaines, notamment la recherche universitaire, les projets culturels et les initiatives éducatives. Les candidats sont invités à fournir des informations détaillées sur leur parcours, l'objet de leur subvention et tout autre document pertinent.",
+      "title": "Postuler maintenant",
+      "stepIndicator": {
+        "step": "Étape",
+        "step1": "Étape 1",
+        "step2": "Étape 2",
+        "step3": "Étape 3",
+        "step4": "Étape 4",
+        "step5": "Étape 5"
+      },
+      "steps": {
+        "1": {
+          "title": "1. Informations Personnelles"
+        },
+        "2": {
+          "title": "2. Contexte de la Demande"
+        },
+        "3": {
+          "title": "3. Historique des Demandes"
+        },
+        "4": {
+          "title": "4. Références"
+        },
+        "5": {
+          "title": "5. Documents"
+        }
+      },
+      "timeEstimate": "Veuillez prévoir environ quinze minutes pour remplir votre candidature.",
+      "documents": {
+        "preferred": "Les documents préférés sont un CV et une proposition budgétaire détaillée.",
+        "incomplete": "Vous pouvez poursuivre votre candidature même si vous n'avez pas tous vos documents disponibles."
+      },
+      "button": {
+        "continue": "Continuer",
+        "back": "Retour",
+        "submit": "Soumettre la candidature"
+      },
+      "help": {
+        "title": "Besoin d'aide pour votre candidature ?",
+        "illustration": "Illustration d'aide"
+      },
+      "hero": {
+        "title": "Demander une subvention",
+        "subtitle": "Rejoignez la mission de notre fondation pour soutenir la recherche, l'éducation et les arts."
+      },
+      "success": {
+        "title": "Candidature envoyée !",
+        "message": "Merci d'avoir soumis votre candidature à la Fondation Hedborg.",
+        "nextSteps": {
+          "title": "Prochaines étapes :",
+          "confirmation": "Vous recevrez un e-mail de confirmation sous 24 heures",
+          "review": "Notre équipe examinera votre candidature (2-3 semaines)",
+          "contact": "Nous vous contacterons si nous avons besoin d'informations supplémentaires"
+        }
+      }
+    },
+
+    "contactUs": {
+        "heading": "Nous contacter",
+        "description": "Vous avez des questions ou des demandes ? Contactez-nous via le formulaire ci-dessous et nous vous répondrons dès que possible.",
+        "formTitle": "Entrer en contact",
+        "nameLabel": "Nom",
+        "emailLabel": "E-mail",
+        "subjectLabel": "Objet",
+        "messageLabel": "Votre message",
+        "namePlaceholder": "Votre nom",
+        "emailPlaceholder": "vous@exemple.com",
+        "subjectPlaceholder": "Objet (facultatif)",
+        "messagePlaceholder": "Dites-nous vos réflexions ou questions...",
+        "submitButton": "Envoyer un message",
+        "thankYouMessage": "Merci ! Votre message a été envoyé."
+      },
+         
+      "impact": {
+        "title": "Notre impact en un coup d'œil",
+        "projectsSponsored": "Projets parrainés",
+        "grantsDistributed": "Subventions distribuées",
+        "yearsOfSupport": "Années de soutien"
+      },
+      "moreAbout": {
+        "title": "En savoir plus sur la fondation",
+        "ourHistory": {
+          "alt": "Notre histoire",
+          "title": "Notre histoire",
+          "description": "Découvrez les origines de la fondation et les valeurs qui guident notre travail."
+        },
+        "howToApply": {
+          "alt": "Comment postuler",
+          "title": "Comment postuler",
+          "description": "Découvrez comment vous pouvez demander des subventions et contribuer au travail de la fondation."
+        },
+        "contactUs": {
+          "alt": "Nous contacter",
+          "title": "Nous contacter",
+          "description": "Contactez-nous pour en savoir plus sur notre fondation ou poser des questions."
+        }
+      },
+
+      "learnMore": "En savoir plus",
+
+      "history": {
+        "heroTitle": "Notre Histoire",
+        "impactTitle": "Impact en un coup d'œil",
+        "projectsSponsored": "Projets Parrainés",
+        "grantsDistributed": "Subventions Distribuées (€)",
+        "yearsOfSupport": "Années de Soutien",
+        "foundationTitle": "La Fondation",
+        "foundationText1": "L'objectif de la fondation est de soutenir et de développer les liens entre la Belgique et la Suède en hommage à la mémoire de la Reine Astrid de Belgique. Son activité est basée sur des dons du Consul Général Karl Erik Hedborg.",
+        "foundationText2": "La fondation distribue actuellement des subventions deux fois par an. Les subventions peuvent être attribuées par exemple pour soutenir des études académiques supérieures, des échanges de recherche, l'impression et la traduction d'œuvres littéraires ou scientifiques ainsi que pour soutenir des expositions d'art, des concerts et des conférences qui servent à renforcer les liens entre la Suède et la Belgique.",
+        "foundationText3": "Le conseil d'administration décide des demandes de subventions lors de ses deux réunions annuelles en avril et en novembre. Pour être examinées lors de ces réunions, les demandes doivent parvenir au secrétaire de la fondation au plus tard le 15 mars ou le 15 octobre.",
+        "karlErikTitle": "Karl-Erik Hedborg (1889 - 1988)",
+        "karlErikText1": "Karl-Erik Hedborg (1889 - 1988) a commencé à travailler pour Svenska Tändsticksaktiebolaget (STAB) peu de temps après avoir obtenu son diplôme de Master en ingénierie. En 1920, il a été nommé directeur général de la filiale STAB, Union Allumettière, en Belgique. Il a démissionné en 1956 mais a poursuivi ses activités en faveur de l'entreprise et des relations bilatérales entre la Suède et la Belgique.",
+        "karlErikText2": "De 1928 à 1962, il a également été consul général de Suède à Bruxelles et a joué un rôle important, notamment pendant l'occupation allemande de 1940 à 1945. Sa position de diplomate d'un pays neutre lui a permis de contribuer de manière significative à la transition de l'occupation allemande vers l'indépendance de la Belgique.",
+        "karlErikText3": "Pendant la majeure partie du 20e siècle, Karl Erik Hedborg et sa femme Petra ont été des personnalités éminentes de la communauté nordique de Bruxelles, travaillant sans relâche pour renforcer les liens entre la Suède et la Belgique. La fondation chargée de poursuivre cette œuvre a été créée le 7 mars 1984.",
+        "boardTitle": "Conseil d'Administration",
+        "boardDescription": "Notre conseil est composé de professionnels expérimentés, dévoués à la croissance continue de la collaboration entre la Belgique et la Suède.",
+        "boardMembers": {
+          "urban": {
+            "name": "Urban Hedborg",
+            "role": "Président"
+          },
+          "thomas": {
+            "name": "Thomas Arnout",
+            "role": "Membre du Conseil"
+          },
+          "eva": {
+            "name": "Eva Bondesson",
+            "role": "Membre du Conseil"
+          },
+          "larsOwe": {
+            "name": "Lars-Owe Forsberg",
+            "role": "Membre du Conseil"
+          },
+          "niclas": {
+            "name": "Niclas Lemme",
+            "role": "Secrétaire"
+          },
+          "oliver": {
+            "name": "Oliver Hedborg",
+            "role": "Membre du Conseil"
+          }
+        }
+      },
+
+      "home": {
+        "hero": {
+          "title": "Relier la Belgique et la Suède",
+          "subtitle": "Par le partage des connaissances, de la culture et de l'innovation",
+          "learnMore": "En savoir plus"
+        },
+        "applicationClosing": "Postulez maintenant - clôture des candidatures le 1er mai →"
+      },
+
+      "navigation": {
+        "aboutUs": "À propos de nous",
+        "howToApply": "Comment postuler",
+        "ourHistory": "Notre histoire"
+      },
+
+      "contactForm": {
+        "title": "Comment Postuler",
+        "intro1": "Vous envisagez de demander une subvention à la Fondation Petra et Karl Erik Hedborg ? Voici les informations dont nous avons besoin de votre part pour évaluer votre candidature. Veuillez fournir autant de détails que possible pour nous aider à comprendre votre projet et votre parcours.",
+        "intro2": "Les subventions peuvent être accordées pour des études universitaires supérieures, des échanges de recherche, la traduction d'œuvres littéraires ou scientifiques, ou pour soutenir des expositions d'art, des concerts et des conférences.",
+        "intro3": "Si vous avez des questions, n'hésitez pas à nous contacter. Nous sommes là pour vous guider tout au long du processus de candidature.",
+        "thankYouMessage": "Merci! Nous avons bien reçu votre candidature.",
+        "formTitle": "Formulaire de Candidature",
+        "name": "Nom",
+        "email": "E-mail",
+        "lastName": "Nom de Famille",
+        "phone": "Téléphone",
+        "namePlaceholder": "Votre nom",
+        "emailPlaceholder": "vous@example.com",
+        "lastNamePlaceholder": "Nom de famille",
+        "phonePlaceholder": "Numéro de téléphone",
+        "background": "Votre parcours",
+        "backgroundPlaceholder": "Parlez-nous de votre parcours...",
+        "references": "Références",
+        "referencesPlaceholder": "Ex: collègues, superviseurs, etc.",
+        "purpose": "Objet de la demande",
+        "purposePlaceholder": "Décrivez votre projet ou la raison de votre candidature...",
+        "amount": "Montant demandé",
+        "amountPlaceholder": "Montant en USD ou EUR",
+        "previousGrants": "Avez-vous déjà postulé ou reçu d'autres subventions? Si oui, de qui?",
+        "previousGrantsPlaceholder": "Autres subventions reçues",
+        "appliedHedborg": "Avez-vous postulé ou reçu des subventions de la Fondation Hedborg?",
+        "yes": "Oui",
+        "no": "Non",
+        "howHeard": "Comment avez-vous entendu parler de la Fondation Hedborg?",
+        "howHeardPlaceholder": "Votre réponse...",
+        "attachCV": "Joindre votre CV (facultatif)",
+        "additionalAttachments": "Pièces jointes supplémentaires (facultatif)",
+        "submitButton": "Soumettre",
+        "applicationCategory": "Catégorie de la demande",
+        "selectOption": "Sélectionner une option...",
+        "referralSources": {
+          "Facebook": "Facebook",
+          "LinkedIn": "LinkedIn",
+          "X_Twitter": "X (Twitter)",
+          "Google_Search": "Google Search",
+          "Friend_Family": "Ami ou Famille",
+          "Organization_Referral": "Organisation par référence",
+          "Other": "Autre"
+        },
+        "applicationCategories": {
+          "Information_Technology": "Technologies de l'Information",
+          "Research": "Recherche",
+          "Culture": "Culture",
+          "Education": "Éducation",
+          "Healthcare": "Santé",
+          "Environmental": "Environnement",
+          "Social_Impact": "Impact Social",
+          "Innovation": "Innovation",
+          "Entrepreneurship": "Entrepreneuriat",
+          "Arts": "Arts",
+          "Science": "Science",
+          "Other": "Autre"
+        },
+        "previousGrantsHelper": "Veuillez inclure toute précédente demande à notre fondation ainsi que d'autres fondations"
+      },
+
+      "faq": {
+        "title": "Questions Fréquemment Posées",
+        "question1": "Quel est l'objectif de la subvention ?",
+        "answer1": "La subvention soutient les individus et les organisations impliqués dans la recherche, l'éducation, les arts et les projets culturels. Notre fondation vise à contribuer à la croissance à long terme dans ces domaines.",
+        "question2": "Qui peut postuler pour une subvention ?",
+        "answer2": "Nos subventions sont disponibles pour les individus, les groupes ou les institutions travaillant dans la recherche académique, les arts et la culture. Des critères d'éligibilité spécifiques peuvent s'appliquer en fonction du type de projet.",
+        "question3": "Comment postuler pour la subvention ?",
+        "answer3": "Pour postuler, remplissez notre formulaire de candidature en ligne avec des informations détaillées sur votre projet, votre parcours et votre objectif. Nous encourageons les candidats à fournir des documents justificatifs si nécessaire.",
+        "question4": "Quelle est la date limite de candidature ?",
+        "answer4": "Les candidatures pour les subventions sont examinées en continu. Il n'y a pas de date limite fixe, mais nous encourageons les candidats à postuler tôt pour une meilleure considération.",
+        "question5": "Quels types de projets ne finançons-nous pas ?",
+        "answer5": "Nous ne finançons pas :\n- Les programmes MBA\n- Les frais de subsistance\n- Les projets sans lien clair avec la Belgique",
+        
+        "question6": "Quelle documentation est requise pour les projets plus importants ?",
+        "answer6": "Pour les projets plus importants, nous exigeons une ventilation détaillée des coûts avec votre candidature. Celle-ci doit être jointe comme document supplémentaire dans le formulaire de candidature, détaillant toutes les dépenses prévues et leur justification.",
+        
+        "question7": "Quel niveau de détail doit avoir la ventilation du budget ?",
+        "answer7": "Votre ventilation budgétaire doit inclure :\n- Les coûts détaillés pour chaque dépense majeure\n- Le calendrier des besoins en financement\n- Tout cofinancement ou autres sources de financement\n- La justification de chaque poste de coût important",
+        
+        "question8": "Quel montant puis-je demander ?",
+        "answer8": "Il n'y a pas de limite fixe pour les montants de financement. Vous pouvez demander le montant dont vous avez besoin, à condition de pouvoir pleinement justifier les coûts dans votre budget et démontrer comment le projet contribue au renforcement des liens entre la Belgique et la Suède."
+      },
+
+      "foundation": {
+        "title": "La Fondation",
+        "description1": "L'objectif de la fondation est de soutenir et de développer les liens entre la Belgique et la Suède en hommage à la mémoire de la reine Astrid de Belgique. Son activité est basée sur des dons du consul général Karl Erik Hedborg.",
+        "description2": "La fondation distribue des subventions deux fois par an. Les subventions peuvent être attribuées pour des études académiques supérieures, des échanges de recherche, des traductions d'œuvres littéraires ou scientifiques, ou pour soutenir des expositions d'art, des concerts et des conférences.",
+        "description3": "Le conseil d'administration décide des demandes de subvention lors de ses deux réunions annuelles en avril et en novembre. Pour être prises en compte, les demandes doivent parvenir au secrétaire de la fondation avant le 15 mars ou le 15 octobre.",
+        "buttonText": "Créer une nouvelle soumission",
+        "subtitle": "À propos de nous"
+      },
+
+  "footer": {
+    "description": "Nous sommes une organisation à but non lucratif qui relie la Belgique et la Suède à travers la culture, les connaissances et l'innovation",
+    "contactUs": "Nous Contacter",
+    "privacyStatement": "Politique de Confidentialité"
+  }
+}
+  

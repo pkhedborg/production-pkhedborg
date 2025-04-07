@@ -1,0 +1,265 @@
+{
+    "application": {
+      "heroTitle": "Aanvragen voor een subsidie",
+      "heroDescription": "Sluit u aan bij de missie van onze stichting om onderzoek, onderwijs en de kunsten te ondersteunen. Lees meer over hoe u financiering kunt aanvragen.",
+      "learnMoreButton": "Meer informatie",
+      "processTitle": "Het aanvraagproces",
+      "processDescription": "Onze stichting biedt subsidies aan individuen op verschillende gebieden, waaronder academisch onderzoek, culturele projecten en educatieve initiatieven. Aanvragers worden aangemoedigd om gedetailleerde informatie te verstrekken over hun achtergrond, het doel van hun subsidie en eventuele andere relevante documentatie.",
+      "title": "Nu aanmelden",
+      "stepIndicator": {
+        "step": "Stap",
+        "step1": "Stap 1",
+        "step2": "Stap 2",
+        "step3": "Stap 3",
+        "step4": "Stap 4",
+        "step5": "Stap 5"
+      },
+      "steps": {
+        "1": {
+          "title": "1. Persoonlijke Gegevens"
+        },
+        "2": {
+          "title": "2. Aanvraag Achtergrond"
+        },
+        "3": {
+          "title": "3. Aanvraag Historie"
+        },
+        "4": {
+          "title": "4. Referenties"
+        },
+        "5": {
+          "title": "5. Documenten"
+        }
+      },
+      "timeEstimate": "Neem ongeveer vijftien minuten de tijd om uw aanvraag in te vullen.",
+      "documents": {
+        "preferred": "Voorkeursdocumenten zijn een CV en een gedetailleerd budgetvoorstel.",
+        "incomplete": "U kunt doorgaan met uw aanvraag ook als u niet al uw documenten beschikbaar heeft."
+      },
+      "button": {
+        "continue": "Doorgaan",
+        "back": "Terug",
+        "submit": "Aanvraag indienen"
+      },
+      "help": {
+        "title": "Hulp nodig bij uw aanvraag?",
+        "illustration": "Help illustratie"
+      },
+      "hero": {
+        "title": "Subsidie aanvragen",
+        "subtitle": "Sluit u aan bij de missie van onze stichting om onderzoek, onderwijs en kunst te ondersteunen."
+      },
+      "success": {
+        "title": "Aanvraag ingediend!",
+        "message": "Bedankt voor het indienen van uw aanvraag bij de Hedborg Foundation.",
+        "nextSteps": {
+          "title": "Volgende stappen:",
+          "confirmation": "U ontvangt binnen 24 uur een bevestigingsmail",
+          "review": "Ons team beoordeelt uw aanvraag (2-3 weken)",
+          "contact": "Wij nemen contact met u op als we aanvullende informatie nodig hebben"
+        }
+      }
+    },
+
+    "contactUs": {
+        "heading": "Neem contact met ons op",
+        "description": "Heeft u vragen of verzoeken? Neem contact met ons op via het onderstaande formulier en wij nemen zo snel mogelijk contact met u op.",
+        "formTitle": "Neem contact op",
+        "nameLabel": "Naam",
+        "emailLabel": "E-mail",
+        "subjectLabel": "Onderwerp",
+        "messageLabel": "Uw bericht",
+        "namePlaceholder": "Uw naam",
+        "emailPlaceholder": "u@example.com",
+        "subjectPlaceholder": "Onderwerp (optioneel)",
+        "messagePlaceholder": "Vertel ons uw gedachten of vragen...",
+        "submitButton": "Bericht versturen",
+        "thankYouMessage": "Bedankt! Uw bericht is verzonden."
+      },
+
+      "impact": {
+        "title": "Onze impact in een oogopslag",
+        "projectsSponsored": "Gesponsorde projecten",
+        "grantsDistributed": "Verstrekte subsidies",
+        "yearsOfSupport": "Jaren van ondersteuning"
+      },
+      "moreAbout": {
+        "title": "Meer over de stichting",
+        "ourHistory": {
+          "alt": "Onze geschiedenis",
+          "title": "Onze geschiedenis",
+          "description": "Lees meer over de oorsprong van de stichting en de waarden die ons werk sturen."
+        },
+        "howToApply": {
+          "alt": "Hoe te solliciteren",
+          "title": "Hoe te solliciteren",
+          "description": "Ontdek hoe je subsidies kunt aanvragen en kunt bijdragen aan het werk van de stichting."
+        },
+        "contactUs": {
+          "alt": "Neem contact op",
+          "title": "Neem contact op",
+          "description": "Neem contact met ons op om meer te weten over onze stichting of om vragen te stellen."
+        }
+      },
+
+      "learnMore": "Meer informatie",
+
+
+      "history": {
+        "heroTitle": "Onze Geschiedenis",
+        "impactTitle": "Impact in een Oogopslag",
+        "projectsSponsored": "Gesponsorde Projecten",
+        "grantsDistributed": "Uitgereikte Subsidies (€)",
+        "yearsOfSupport": "Jaren van Ondersteuning",
+        "foundationTitle": "De Stichting",
+        "foundationText1": "Het doel van de stichting is het ondersteunen en ontwikkelen van banden tussen België en Zweden, als eerbetoon aan de herinnering aan Koningin Astrid van België. De activiteiten worden gefinancierd door giften van Consul-Generaal Karl Erik Hedborg.",
+        "foundationText2": "De stichting kent momenteel twee keer per jaar subsidies toe. Subsidies kunnen worden toegekend voor bijvoorbeeld het ondersteunen van academisch onderzoek, culturele projecten, en tentoonstellingen die de banden tussen Zweden en België versterken.",
+        "foundationText3": "Het bestuur beslist over de aanvragen tijdens de twee jaarlijkse vergaderingen in april en november. Aanvragen moeten vóór 15 maart of 15 oktober binnen zijn.",
+        "karlErikTitle": "Karl-Erik Hedborg (1889 - 1988)",
+        "karlErikText1": "Karl-Erik Hedborg (1889 - 1988) begon zijn carrière bij Svenska Tändsticksaktiebolaget (STAB) kort na zijn afstuderen als MSc in Engineering. In 1920 werd hij benoemd tot algemeen directeur van de STAB-dochteronderneming Union Allumettière in België. Hij nam ontslag in 1956, maar bleef actief in de ondersteuning van bilaterale betrekkingen tussen Zweden en België.",
+        "karlErikText2": "Van 1928 tot 1962 was hij ook Zweeds consul-generaal in Brussel en speelde hij een belangrijke rol, vooral tijdens de Duitse bezetting van 1940 tot 1945. Zijn positie als diplomaat van een neutraal land stelde hem in staat om een belangrijke bijdrage te leveren aan de overgang van de Duitse bezetting naar de Belgische onafhankelijkheid.",
+        "karlErikText3": "Gedurende een groot deel van de 20e eeuw waren Karl Erik Hedborg en zijn vrouw Petra prominente figuren in de Scandinavische gemeenschap van Brussel, die onvermoeibaar werkten aan het versterken van de banden tussen Zweden en België. De stichting werd op 7 maart 1984 opgericht om dit werk voort te zetten.",
+        "boardTitle": "Bestuur",
+        "boardDescription": "Ons bestuur bestaat uit ervaren professionals die zich inzetten voor de verdere groei van de samenwerking tussen België en Zweden.",
+        "boardMembers": {
+          "urban": {
+            "name": "Urban Hedborg",
+            "role": "Voorzitter"
+          },
+          "thomas": {
+            "name": "Thomas Arnout",
+            "role": "Bestuurslid"
+          },
+          "eva": {
+            "name": "Eva Bondesson",
+            "role": "Bestuurslid"
+          },
+          "larsOwe": {
+            "name": "Lars-Owe Forsberg",
+            "role": "Bestuurslid"
+          },
+          "niclas": {
+            "name": "Niclas Lemme",
+            "role": "Secretaris"
+          },
+          "oliver": {
+            "name": "Oliver Hedborg",
+            "role": "Bestuurslid"
+          }
+        }
+      },
+      "home": {
+        "hero": {
+          "title": "België en Zweden verbinden",
+          "subtitle": "Door gedeelde kennis, cultuur en innovatie",
+          "learnMore": "Meer informatie"
+        },
+        "applicationClosing": "Schrijf nu in - aanmeldingen sluiten op 1 mei →"
+      },
+
+      "navigation": {
+        "aboutUs": "Over ons",
+        "howToApply": "Hoe te solliciteren",
+        "ourHistory": "Onze geschiedenis"
+      },
+
+      "contactForm": {
+        "title": "Hoe aan te vragen",
+        "intro1": "Bent u van plan een subsidie aan te vragen bij de Petra en Karl Erik Hedborg Stichting? Hier is de informatie die we van u nodig hebben om uw aanvraag te beoordelen. Geef zoveel mogelijk details zodat we uw project en achtergrond goed kunnen begrijpen.",
+        "intro2": "Subsidies kunnen worden toegekend voor hogere academische studies, onderzoek uitwisselingen, vertaling van literaire of wetenschappelijke werken, of voor kunsttentoonstellingen, concerten en lezingen.",
+        "intro3": "Als u vragen heeft, neem dan gerust contact met ons op. We helpen u graag door het aanvraagproces.",
+        "thankYouMessage": "Bedankt! We hebben uw aanvraag ontvangen.",
+        "formTitle": "Aanvraagformulier",
+        "name": "Naam",
+        "email": "E-mail",
+        "lastName": "Achternaam",
+        "phone": "Telefoonnummer",
+        "namePlaceholder": "Uw naam",
+        "emailPlaceholder": "u@example.com",
+        "lastNamePlaceholder": "Achternaam",
+        "phonePlaceholder": "Telefoonnummer",
+        "background": "Uw achtergrond",
+        "backgroundPlaceholder": "Vertel ons over uw achtergrond...",
+        "references": "Referenties",
+        "referencesPlaceholder": "Bijv. collega's, supervisors, etc.",
+        "purpose": "Doel van de aanvraag",
+        "purposePlaceholder": "Beschrijf uw project of reden voor aanvraag...",
+        "amount": "Bedrag waarvoor u aanvraagt",
+        "amountPlaceholder": "Bedrag in USD of EUR",
+        "previousGrants": "Heeft u eerder subsidies aangevraagd of ontvangen? Zo ja, van wie?",
+        "previousGrantsPlaceholder": "Andere ontvangen subsidies",
+        "previousGrantsHelper": "Voeg eventuele eerdere aanvragen bij onze stichting en andere stichtingen toe",
+        "appliedHedborg": "Heeft u eerder subsidies aangevraagd of ontvangen bij de Hedborg Stichting?",
+        "yes": "Ja",
+        "no": "Nee",
+        "howHeard": "Hoe heeft u gehoord over de Hedborg Stichting?",
+        "howHeardPlaceholder": "Uw antwoord...",
+        "attachCV": "Voeg uw CV toe (optioneel)",
+        "additionalAttachments": "Extra bijlagen (optioneel)",
+        "submitButton": "Indienen",
+        "applicationCategory": "Aanvraagcategorie",
+        "selectOption": "Selecteer een optie...",
+        "referralSources": {
+          "Facebook": "Facebook",
+          "LinkedIn": "LinkedIn",
+          "X_Twitter": "X (Twitter)",
+          "Google_Search": "Google Search",
+          "Friend_Family": "Vriend of Familie",
+          "Organization_Referral": "Organisatie door verwijzing",
+          "Other": "Anders"
+        },
+        "applicationCategories": {
+          "Information_Technology": "Informatietechnologie",
+          "Research": "Onderzoek",
+          "Culture": "Cultuur",
+          "Education": "Onderwijs",
+          "Healthcare": "Gezondheidszorg",
+          "Environmental": "Milieu",
+          "Social_Impact": "Sociale Impact",
+          "Innovation": "Innovatie",
+          "Entrepreneurship": "Ondernemerschap",
+          "Arts": "Kunst",
+          "Science": "Wetenschap",
+          "Other": "Anders"
+        }
+      },
+
+      "faq": {
+        "title": "Veelgestelde Vragen",
+        "question1": "Wat is het doel van de subsidie?",
+        "answer1": "De subsidie ondersteunt individuen en organisaties die betrokken zijn bij onderzoek, onderwijs, kunst en culturele projecten. Onze stichting streeft ernaar bij te dragen aan langdurige groei in deze gebieden.",
+        "question2": "Wie kan een subsidie aanvragen?",
+        "answer2": "Onze subsidies zijn beschikbaar voor individuen, groepen of instellingen die werken in academisch onderzoek, kunst en cultuur. Specifieke criteria kunnen van toepassing zijn, afhankelijk van het type project.",
+        "question3": "Hoe vraag ik de subsidie aan?",
+        "answer3": "Om aan te vragen, vult u ons online aanvraagformulier in met gedetailleerde informatie over uw project, achtergrond en doel. We moedigen aanvragers aan om ondersteunende documenten te verstrekken indien van toepassing.",
+        "question4": "Wat is de deadline voor aanvragen?",
+        "answer4": "Subsidieaanvragen worden doorlopend beoordeeld. Er is geen vaste deadline, maar we raden aanvragers aan om vroeg te solliciteren voor de beste overweging.",
+        "question5": "Welke soorten projecten sponsoren wij niet?",
+        "answer5": "Wij bieden geen financiering voor:\n- MBA-programma's\n- Levensonderhoud\n- Projecten zonder duidelijke connectie met België",
+        
+        "question6": "Welke documentatie is vereist voor grotere projecten?",
+        "answer6": "Voor grotere projecten vereisen we een gedetailleerde kostenspecificatie bij uw aanvraag. Deze moet als aanvullend document bij het aanvraagformulier worden gevoegd, met een overzicht van alle verwachte uitgaven en hun rechtvaardiging.",
+        
+        "question7": "Hoe gedetailleerd moet de budgetspecificatie zijn?",
+        "answer7": "Uw budgetspecificatie moet bevatten:\n- Gespecificeerde kosten voor elke grote uitgave\n- Tijdlijn voor wanneer financiering nodig is\n- Eventuele cofinanciering of andere financieringsbronnen\n- Rechtvaardiging voor elk significant kostenitem",
+        
+        "question8": "Hoeveel financiering kan ik aanvragen?",
+        "answer8": "Er is geen vast limiet voor financieringsbedragen. U kunt het bedrag aanvragen dat u nodig heeft, mits u de kosten in uw budget volledig kunt rechtvaardigen en kunt aantonen hoe het project bijdraagt aan het versterken van de banden tussen België en Zweden."
+      },
+
+      "foundation": {
+        "title": "De Stichting",
+        "description1": "Het doel van de stichting is om de banden tussen België en Zweden te ondersteunen en te ontwikkelen als eerbetoon aan de herinnering van Koningin Astrid van België. De activiteiten zijn gebaseerd op schenkingen van consul-generaal Karl Erik Hedborg.",
+        "description2": "De stichting verdeelt twee keer per jaar beurzen. Beurzen kunnen worden toegekend voor hogere academische studies, uitwisseling van onderzoek, vertaling van literaire of wetenschappelijke werken, of ter ondersteuning van kunsttentoonstellingen, concerten en lezingen.",
+        "description3": "Het bestuur beslist over aanvragen voor beurzen tijdens de twee jaarlijkse vergaderingen in april en november. Om in aanmerking te komen, moeten de aanvragen uiterlijk 15 maart of 15 oktober bij de secretaris van de stichting zijn ingediend.",
+        "buttonText": "Maak een nieuwe inzending",
+        "subtitle": "Over ons"
+      },
+      
+  "footer": {
+    "description": "Wij zijn een non-profit organisatie die België en Zweden verbindt door cultuur, kennis en innovatie.",
+    "contactUs": "Contact",
+    "privacyStatement": "Privacyverklaring"
+  }
+}
+  

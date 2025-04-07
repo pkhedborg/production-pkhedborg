@@ -1,0 +1,274 @@
+{
+    "application": {
+      "hero": {
+        "title": "Apply for a Grant",
+        "subtitle": "Join our foundation's mission to support research, education, and the arts"
+      },
+      "heroTitle": "Apply for a Grant",
+      "heroDescription": "Join our foundation's mission to support research, education, and the arts. Learn more about how you can apply for funding.",
+      "learnMoreButton": "Learn More",
+      "processTitle": "The Application Process",
+      "processDescription": "Our foundation offers grants to individuals in a variety of fields, including academic research, cultural projects, and educational initiatives. Applicants are encouraged to provide detailed information about their background, the purpose of their grant, and any other relevant documentation.",
+      "applyNow": "Apply Now",
+      "timeEstimate": "Please allow about fifteen minutes to complete your application.",
+      "documentsRequired": "Preferred documents are a CV and a detailed budget proposal.",
+      "proceedWithout": "You may proceed with your application even if you do not have all your documents available.",
+      "needHelp": "Need help with your application?",
+      "steps": {
+        "1": {
+          "title": "1. Personal Details"
+        },
+        "2": {
+          "title": "2. Application Background"
+        },
+        "3": {
+          "title": "3. Application History"
+        },
+        "4": {
+          "title": "4. References"
+        },
+        "5": {
+          "title": "5. Documents"
+        }
+      },
+      "cta": "Apply Now",
+      "documents": {
+        "preferred": "Preferred documents are a CV and a detailed budget proposal.",
+        "incomplete": "You may proceed with your application even if you do not have all your documents available."
+      },
+      "help": {
+        "title": "Need help with your application?",
+        "illustration": "Help illustration"
+      },
+      "button": {
+        "continue": "Continue",
+        "back": "Back",
+        "submit": "Submit Application"
+      },
+      "stepIndicator": {
+        "step": "Step",
+        "step1": "Step 1",
+        "step2": "Step 2",
+        "step3": "Step 3",
+        "step4": "Step 4",
+        "step5": "Step 5"
+      },
+      "title": "Application"
+    },
+
+    "impact": {
+      "title": "Our Impact at a Glance",
+      "projectsSponsored": "Projects Sponsored",
+      "grantsDistributed": "Grants Distributed",
+      "yearsOfSupport": "Years of Support"
+    },
+    "moreAbout": {
+      "title": "More about the foundation",
+      "ourHistory": {
+        "alt": "Our History",
+        "title": "Our History",
+        "description": "Learn about the origins of the foundation and the values that drive our work."
+      },
+      "howToApply": {
+        "alt": "How to Apply",
+        "title": "How to Apply",
+        "description": "Discover how you can apply for grants and contribute to the foundation's work."
+      },
+      "contactUs": {
+        "alt": "Contact Us",
+        "title": "Contact Us",
+        "description": "Get in touch with us to learn more about our foundation or ask questions."
+      }
+    },
+
+    "learnMore": "Learn More",
+    
+  
+    "contactUs": {
+      "heading": "Contact Us",
+      "description": "Do you have any questions or inquiries? Reach out to us through the form below, and we will get back to you as soon as possible.",
+      "formTitle": "Get in Touch",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "subjectLabel": "Subject",
+      "messageLabel": "Your Message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "you@example.com",
+      "subjectPlaceholder": "Subject (optional)",
+      "messagePlaceholder": "Tell us your thoughts or questions...",
+      "submitButton": "Send Message",
+      "thankYouMessage": "Thank you! Your message has been sent."
+    },
+
+    "history": {
+        "heroTitle": "Our History",
+        "impactTitle": "Impact at a Glance",
+        "projectsSponsored": "Projects Sponsored",
+        "grantsDistributed": "Grants Distributed (€)",
+        "yearsOfSupport": "Years of Support",
+        "foundationTitle": "The Foundation",
+        "foundationText1": "The purpose of the foundation is to support and develop ties between Belgium and Sweden as a tribute to the memory of Queen Astrid of Belgium. Its activity is based on donations from Consul General Karl Erik Hedborg.",
+        "foundationText2": "The foundation (at present) distributes grants twice annually. Grants may be awarded e.g. in support of higher academic studies, research exchange, printing and translation of literary or scientific works as well as in support of art exhibitions, concerts and lectures that serve the purpose of strengthening the ties between Sweden and Belgium.",
+        "foundationText3": "The board of directors decides on applications for grants at its two annual meetings in April and November. To be dealt with at these meetings applications for grants must have reached the secretary of the foundation on March 15 or on October 15 at the latest.",
+        "karlErikTitle": "Karl-Erik Hedborg (1889 - 1988)",
+        "karlErikText1": "Karl-Erik Hedborg (1889 - 1988) began working for Svenska Tändsticksaktiebolaget (STAB) shortly after graduating as an MSc in Engineering. In 1920 he was appointed managing director of STAB subsidiary Union Allumettière in Belgium. He resigned in 1956 but continued his activities in support of the company and of bilateral relations between Sweden and Belgium.",
+        "karlErikText2": "Through the years 1928 - 1962 he was also Swedish Consul General in Brussels and played an important role, not least during the German occupation 1940 - 1945. His position as a diplomat of a neutral country made it possible for him to contribute significantly to the transition from German occupation to independent Belgian rule.",
+        "karlErikText3": "During most of the 20th century Karl Erik Hedborg and his wife Petra were prominent personalities in the Nordic community of Brussels, working tirelessly to strengthen the ties between Sweden and Belgium. The foundation charged with continuing this work was established on March 7 1984.",
+        "boardTitle": "Board",
+        "boardDescription": "Our board consists of experienced professionals dedicated to the continued growth of Belgium and Sweden's collaboration.",
+        "boardMembers": {
+          "urban": {
+            "name": "Urban Hedborg",
+            "role": "Chair"
+          },
+          "thomas": {
+            "name": "Thomas Arnout",
+            "role": "Board Member"
+          },
+          "eva": {
+            "name": "Eva Bondesson",
+            "role": "Board Member"
+          },
+          "larsOwe": {
+            "name": "Lars-Owe Forsberg",
+            "role": "Board Member"
+          },
+          "niclas": {
+            "name": "Niclas Lemme",
+            "role": "Secretary"
+          },
+          "oliver": {
+            "name": "Oliver Hedborg",
+            "role": "Board Member"
+          }
+        },
+
+        "home": {
+            "hero": {
+              "title": "Connecting Belgium and Sweden",
+              "subtitle": "Through shared knowledge, culture, and innovation",
+              "learnMore": "Learn More"
+            }
+          }
+      },
+  
+      "navigation": {
+        "aboutUs": "About Us",
+        "howToApply": "How to Apply",
+        "ourHistory": "Our History"
+      },
+
+
+      "contactForm": {
+        "title": "How To Apply",
+        "intro1": "Are you planning to apply for a grant from the Petra and Karl Erik Hedborg Foundation? Here is the information we need from you to assess your application. Please provide as much detail as possible to help us understand your project and background.",
+        "intro2": "Grants may be awarded for higher academic studies, research exchanges, translation of literary or scientific works, or support for art exhibitions, concerts, and lectures.",
+        "intro3": "If you have any questions, feel free to contact us. We're here to help guide you through the application process.",
+        "thankYouMessage": "Thank you! We have received your application.",
+        "formTitle": "Application Form",
+        "name": "Name",
+        "email": "Email",
+        "lastName": "Last Name",
+        "phone": "Phone",
+        "namePlaceholder": "Your name",
+        "emailPlaceholder": "you@example.com",
+        "lastNamePlaceholder": "Last name",
+        "phonePlaceholder": "Phone number",
+        "background": "Your background",
+        "backgroundPlaceholder": "Tell us about your background...",
+        "references": "References",
+        "referencesPlaceholder": "E.g. colleagues, supervisors, etc.",
+        "purpose": "Purpose of application",
+        "purposePlaceholder": "Describe your project or reason for applying...",
+        "amount": "Amount you are applying for",
+        "amountPlaceholder": "Amount in USD or EUR",
+        "previousGrants": "Have you applied for or received other grants? If yes, from where?",
+        "previousGrantsPlaceholder": "Other grants received",
+        "appliedHedborg": "Have you applied for or received grants from the Hedborg Foundation?",
+        "yes": "Yes",
+        "no": "No",
+        "howHeard": "How did you hear about the Hedborg Foundation?",
+        "howHeardPlaceholder": "Your answer...",
+        "attachCV": "Attach your CV (optional)",
+        "additionalAttachments": "Additional attachments (optional)",
+        "submitButton": "Submit",
+        "applicationCategory": "Application category",
+        "selectOption": "Select an option...",
+        "referralSources": {
+          "Facebook": "Facebook",
+          "LinkedIn": "LinkedIn",
+          "X_Twitter": "X (Twitter)",
+          "Google_Search": "Google Search",
+          "Friend_Family": "Friend or Family",
+          "Organization_Referral": "Organization Referral",
+          "Other": "Other"
+        },
+
+        "applicationCategories": {
+          "Information_Technology": "Information Technology",
+          "Research": "Research",
+          "Culture": "Culture",
+          "Education": "Education",
+          "Healthcare": "Healthcare",
+          "Environmental": "Environmental",
+          "Social_Impact": "Social Impact",
+          "Innovation": "Innovation",
+          "Entrepreneurship": "Entrepreneurship",
+          "Arts": "Arts",
+          "Science": "Science",
+          "Other": "Other"
+        },
+
+        "previousGrantsHelper": "Please include any previous applications to our foundation as well as other foundations",
+        "addReference": "Add a reference",
+        "continue": "Continue",
+        "whatHappensNext": "What happens next?",
+        "nextSteps": {
+          "review": "Your application will be reviewed by our team",
+          "confirmation": "You'll receive a confirmation email within 24 hours",
+          "process": "Applications are reviewed on a rolling basis and decisions are finalized at our next board meeting",
+          "contact": "We'll contact you if we need additional information"
+        },
+        "submit": "Submit Application"
+      },
+
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "question1": "What is the purpose of the grant?",
+        "answer1": "The grant supports individuals and organizations involved in research, education, arts, and cultural projects. Our foundation aims to contribute to long-term growth in these areas.",
+        "question2": "Who can apply for a grant?",
+        "answer2": "Our grants are available to individuals, groups, or institutions working in academic research, arts, and culture. Specific eligibility criteria may apply based on the type of project.",
+        "question3": "How do I apply for the grant?",
+        "answer3": "To apply, fill out our online application form with detailed information about your project, background, and purpose. We encourage applicants to provide supporting documents if applicable.",
+        "question4": "What is the application deadline?",
+        "answer4": "Grant applications are reviewed on a rolling basis. There is no fixed deadline, but we encourage applicants to apply early for best consideration.",
+        "question5": "What types of projects do we not sponsor?",
+        "answer5": "We do not provide funding for:\n- MBA programs\n- Living expenses\n- Projects without a clear connection to Belgium",
+        "question6": "What documentation is required for larger projects?",
+        "answer6": "For larger projects, we require a detailed cost breakdown to be included with your application. This should be attached as an additional document in the application form, outlining all expected expenses and their justification.",
+        "question7": "How detailed should the budget breakdown be?",
+        "answer7": "Your budget breakdown should include:\n- Itemized costs for each major expense\n- Timeline for when funds will be needed\n- Any co-funding or other funding sources\n- Justification for each significant cost item",
+        "question8": "How much funding can I apply for?",
+        "answer8": "There is no fixed limit on funding amounts. You can apply for the amount you need, provided you can fully justify the costs in your budget and demonstrate how the project contributes to strengthening ties between Belgium and Sweden."
+      },
+
+      "foundation": {
+        "title": "The Foundation",
+        "description1": "The purpose of the foundation is to support and develop ties between Belgium and Sweden as a tribute to the memory of Queen Astrid of Belgium. Its activity is based on donations from Consul General Karl Erik Hedborg.",
+        "description2": "The foundation distributes grants twice annually. Grants may be awarded for higher academic studies, research exchange, translation of literary or scientific works, or support for art exhibitions, concerts, and lectures.",
+        "description3": "The board of directors decides on applications for grants at its two annual meetings in April and November. To be considered, applications must reach the secretary of the foundation by March 15 or October 15.",
+        "buttonText": "Create a new submission",
+        "subtitle": "About us"
+      },
+    
+    "footer": {
+      "description": "We are a nonprofit connecting Belgium and Sweden through culture, knowledge, and innovation.",
+      "contactUs": "Contact Us",
+      "privacyStatement": "Privacy Statement"
+    },
+
+    "home": {
+      "applicationClosing": "Apply now - application closing 1 May →"
+    }
+  }
+  

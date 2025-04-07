@@ -1,0 +1,267 @@
+{
+    "application": {
+      "heroTitle": "Ansök om ett bidrag",
+      "heroDescription": "Delta i vår stiftelses uppdrag att stödja forskning, utbildning och konst. Lär dig mer om hur du kan ansöka om finansiering.",
+      "learnMoreButton": "Läs mer",
+      "processTitle": "Ansökningsprocessen",
+      "processDescription": "Vår stiftelse erbjuder bidrag till individer inom olika områden, inklusive akademisk forskning, kulturella projekt och utbildningsinitiativ. Sökande uppmanas att lämna detaljerad information om sin bakgrund, syftet med bidraget och annan relevant dokumentation.",
+      "title": "Ansök nu",
+      "stepIndicator": {
+        "step": "Steg",
+        "step1": "Steg 1",
+        "step2": "Steg 2",
+        "step3": "Steg 3",
+        "step4": "Steg 4",
+        "step5": "Steg 5"
+      },
+      "steps": {
+        "1": {
+          "title": "1. Personuppgifter"
+        },
+        "2": {
+          "title": "2. Ansökningsbakgrund"
+        },
+        "3": {
+          "title": "3. Ansökningshistorik"
+        },
+        "4": {
+          "title": "4. Referenser"
+        },
+        "5": {
+          "title": "5. Dokument"
+        }
+      },
+      "timeEstimate": "Vänligen räkna med cirka femton minuter för att slutföra din ansökan.",
+      "documents": {
+        "preferred": "Föredragna dokument är CV och ett detaljerat budgetförslag.",
+        "incomplete": "Du kan fortsätta med din ansökan även om du inte har alla dokument tillgängliga."
+      },
+      "button": {
+        "continue": "Fortsätt",
+        "back": "Tillbaka",
+        "submit": "Skicka ansökan"
+      },
+      "help": {
+        "title": "Behöver du hjälp med din ansökan?",
+        "illustration": "Hjälp illustration"
+      },
+      "hero": {
+        "title": "Ansök om bidrag",
+        "subtitle": "Delta i vår stiftelses uppdrag att stödja forskning, utbildning och konst."
+      },
+      "success": {
+        "title": "Ansökan skickad!",
+        "message": "Tack för din ansökan till Hedborg Foundation.",
+        "nextSteps": {
+          "title": "Nästa steg:",
+          "confirmation": "Du kommer att få ett bekräftelsemail inom 24 timmar",
+          "review": "Vårt team granskar din ansökan (2-3 veckor)",
+          "contact": "Vi kontaktar dig om vi behöver ytterligare information"
+        }
+      }
+    },
+
+    "contactUs": {
+        "heading": "Kontakta oss",
+        "description": "Har du några frågor eller förfrågningar? Kontakta oss via formuläret nedan så återkommer vi så snart som möjligt.",
+        "formTitle": "Ta kontakt",
+        "nameLabel": "Namn",
+        "emailLabel": "E-post",
+        "subjectLabel": "Ämne",
+        "messageLabel": "Ditt meddelande",
+        "namePlaceholder": "Ditt namn",
+        "emailPlaceholder": "du@example.com",
+        "subjectPlaceholder": "Ämne (valfritt)",
+        "messagePlaceholder": "Berätta dina tankar eller frågor...",
+        "submitButton": "Skicka meddelande",
+        "thankYouMessage": "Tack! Ditt meddelande har skickats."
+      },
+
+      "impact": {
+        "title": "Vår påverkan i korthet",
+        "projectsSponsored": "Sponsrade projekt",
+        "grantsDistributed": "Beviljade bidrag",
+        "yearsOfSupport": "Års stöd"
+      },
+      "moreAbout": {
+        "title": "Mer om stiftelsen",
+        "ourHistory": {
+          "alt": "Vår historia",
+          "title": "Vår historia",
+          "description": "Lär dig om stiftelsens ursprung och de värderingar som styr vårt arbete."
+        },
+        "howToApply": {
+          "alt": "Hur man ansöker",
+          "title": "Hur man ansöker",
+          "description": "Upptäck hur du kan ansöka om bidrag och bidra till stiftelsens arbete."
+        },
+        "contactUs": {
+          "alt": "Kontakta oss",
+          "title": "Kontakta oss",
+          "description": "Kontakta oss för att lära dig mer om vår stiftelse eller för att ställa frågor."
+        }
+      },
+
+      "learnMore": "Läs mer",
+
+
+      "history": {
+        "heroTitle": "Vår Historia",
+        "impactTitle": "Påverkan i Siffror",
+        "projectsSponsored": "Sponsrade Projekt",
+        "grantsDistributed": "Delade Ut Bidrag (€)",
+        "yearsOfSupport": "År av Stöd",
+        "foundationTitle": "Stiftelsen",
+        "foundationText1": "Stiftelsens syfte är att stödja och utveckla banden mellan Belgien och Sverige som en hyllning till minnet av Drottning Astrid av Belgien. Verksamheten baseras på donationer från generalkonsul Karl Erik Hedborg.",
+        "foundationText2": "Stiftelsen delar ut bidrag två gånger om året. Bidrag kan beviljas till exempel för akademiska studier, forskningsutbyte, tryckning och översättning av litterära eller vetenskapliga verk samt för konstutställningar, konserter och föreläsningar som stärker banden mellan Sverige och Belgien.",
+        "foundationText3": "Styrelsen beslutar om ansökningar om bidrag vid sina två årliga möten i april och november. Ansökningar måste ha nått stiftelsens sekreterare senast den 15 mars eller den 15 oktober.",
+        "karlErikTitle": "Karl-Erik Hedborg (1889 - 1988)",
+        "karlErikText1": "Karl-Erik Hedborg (1889 - 1988) började arbeta för Svenska Tändsticksaktiebolaget (STAB) kort efter att ha tagit examen som civilingenjör. 1920 utnämndes han till verkställande direktör för STAB:s dotterbolag Union Allumettière i Belgien. Han avgick 1956 men fortsatte sitt arbete för att stärka relationerna mellan Sverige och Belgien.",
+        "karlErikText2": "Mellan 1928 och 1962 var han också Sveriges generalkonsul i Bryssel och spelade en viktig roll, särskilt under den tyska ockupationen 1940 - 1945. Hans position som diplomat i ett neutralt land gjorde det möjligt för honom att bidra väsentligt till övergången från tysk ockupation till belgisk självständighet.",
+        "karlErikText3": "Under större delen av 1900-talet var Karl Erik Hedborg och hans fru Petra framstående personligheter i den nordiska gemenskapen i Bryssel och arbetade outtröttligt för att stärka banden mellan Sverige och Belgien. Stiftelsen, som skulle fortsätta detta arbete, grundades den 7 mars 1984.",
+        "boardTitle": "Styrelse",
+        "boardDescription": "Vår styrelse består av erfarna yrkesverksamma som är engagerade i det fortsatta samarbetet mellan Belgien och Sverige.",
+        "boardMembers": {
+          "urban": {
+            "name": "Urban Hedborg",
+            "role": "Ordförande"
+          },
+          "thomas": {
+            "name": "Thomas Arnout",
+            "role": "Styrelsemedlem"
+          },
+          "eva": {
+            "name": "Eva Bondesson",
+            "role": "Styrelsemedlem"
+          },
+          "larsOwe": {
+            "name": "Lars-Owe Forsberg",
+            "role": "Styrelsemedlem"
+          },
+          "niclas": {
+            "name": "Niclas Lemme",
+            "role": "Sekreterare"
+          },
+          "oliver": {
+            "name": "Oliver Hedborg",
+            "role": "Styrelsemedlem"
+          }
+        }
+      },
+
+      "home": {
+        "hero": {
+          "title": "Knyta Belgien och Sverige samman",
+          "subtitle": "Genom delad kunskap, kultur och innovation",
+          "learnMore": "Läs mer"
+        },
+        "applicationClosing": "Ansök nu - ansökan stänger 1 maj →"
+      },
+
+      "navigation": {
+        "aboutUs": "Om oss",
+        "howToApply": "Hur man ansöker",
+        "ourHistory": "Vår historia"
+      },
+
+      "contactForm": {
+        "title": "Hur man ansöker",
+        "intro1": "Planerar du att ansöka om ett bidrag från Petra och Karl Erik Hedborg-stiftelsen? Här är informationen vi behöver från dig för att bedöma din ansökan. Vänligen ge så mycket detaljer som möjligt för att hjälpa oss förstå ditt projekt och bakgrund.",
+        "intro2": "Bidrag kan beviljas för högre akademiska studier, forskningsutbyten, översättning av litterära eller vetenskapliga verk, eller stöd till konstutställningar, konserter och föreläsningar.",
+        "intro3": "Om du har några frågor, tveka inte att kontakta oss. Vi finns här för att hjälpa dig genom ansökningsprocessen.",
+        "thankYouMessage": "Tack! Vi har mottagit din ansökan.",
+        "formTitle": "Ansökningsformulär",
+        "name": "Namn",
+        "email": "E-post",
+        "lastName": "Efternamn",
+        "phone": "Telefonnummer",
+        "namePlaceholder": "Ditt namn",
+        "emailPlaceholder": "du@example.com",
+        "lastNamePlaceholder": "Efternamn",
+        "phonePlaceholder": "Telefonnummer",
+        "background": "Din bakgrund",
+        "backgroundPlaceholder": "Berätta om din bakgrund...",
+        "references": "Referenser",
+        "referencesPlaceholder": "T.ex. kollegor, handledare, etc.",
+        "purpose": "Syftet med ansökan",
+        "purposePlaceholder": "Beskriv ditt projekt eller anledning till ansökan...",
+        "amount": "Belopp du ansöker om",
+        "amountPlaceholder": "Belopp i USD eller EUR",
+        "previousGrants": "Har du ansökt om eller fått andra bidrag? Om ja, från var?",
+        "previousGrantsPlaceholder": "Andra mottagna bidrag",
+        "previousGrantsHelper": "Vänligen inkludera eventuella tidigare ansökningar till vår stiftelse samt andra stiftelser",
+        "appliedHedborg": "Har du ansökt om eller fått bidrag från Hedborg-stiftelsen?",
+        "yes": "Ja",
+        "no": "Nej",
+        "howHeard": "Hur fick du höra talas om Hedborg-stiftelsen?",
+        "howHeardPlaceholder": "Ditt svar...",
+        "attachCV": "Bifoga ditt CV (valfritt)",
+        "additionalAttachments": "Extra bilagor (valfritt)",
+        "submitButton": "Skicka",
+        "applicationCategory": "Ansökningskategori",
+        "selectOption": "Välj en option...",
+        "referralSources": {
+          "Facebook": "Facebook",
+          "LinkedIn": "LinkedIn",
+          "X_Twitter": "X (Twitter)",
+          "Google_Search": "Google Search",
+          "Friend_Family": "Vän eller Familj",
+          "Organization_Referral": "Organisation via rekommendation",
+          "Other": "Annat"
+        },
+        "applicationCategories": {
+          "Information_Technology": "Informationsteknologi",
+          "Research": "Forskning",
+          "Culture": "Kultur",
+          "Education": "Utbildning",
+          "Healthcare": "Hälsa",
+          "Environmental": "Miljö",
+          "Social_Impact": "Socialt Intäkt",
+          "Innovation": "Innovation",
+          "Entrepreneurship": "Entrepreneurship",
+          "Arts": "Konst",
+          "Science": "Vetenskap",
+          "Other": "Annat"
+        }
+      },
+
+      "faq": {
+        "title": "Vanliga Frågor",
+        "question1": "Vad är syftet med bidraget?",
+        "answer1": "Bidraget stöder individer och organisationer som är involverade i forskning, utbildning, konst och kulturella projekt. Vår stiftelse strävar efter att bidra till långsiktig tillväxt inom dessa områden.",
+        "question2": "Vem kan ansöka om bidrag?",
+        "answer2": "Våra bidrag är tillgängliga för individer, grupper eller institutioner som arbetar med akademisk forskning, konst och kultur. Specifika behörighetskriterier kan gälla beroende på projektets typ.",
+        "question3": "Hur ansöker jag om bidraget?",
+        "answer3": "För att ansöka fyller du i vårt onlineansökningsformulär med detaljerad information om ditt projekt, bakgrund och syfte. Vi uppmuntrar sökande att tillhandahålla stödjande dokument om tillämpligt.",
+        "question4": "Vad är ansökningens sista datum?",
+        "answer4": "Bidragsansökningar granskas löpande. Det finns ingen fast deadline, men vi uppmuntrar sökande att ansöka tidigt för bästa övervägande.",
+        "question5": "Vilka typer av projekt sponsrar vi inte?",
+        "answer5": "Vi ger inte finansiering till:\n- MBA-program\n- Levnadskostnader\n- Projekt utan tydlig koppling till Belgien",
+        
+        "question6": "Vilken dokumentation krävs för större projekt?",
+        "answer6": "För större projekt kräver vi en detaljerad kostnadsnedbrytning med din ansökan. Detta ska bifogas som ett ytterligare dokument i ansökningsformuläret, med en översikt över alla förväntade utgifter och deras motivering.",
+        
+        "question7": "Hur detaljerad ska budgetnedbrytningen vara?",
+        "answer7": "Din budgetnedbrytning ska innehålla:\n- Specificerade kostnader för varje större utgift\n- Tidsplan för när medel behövs\n- Eventuell medfinansiering eller andra finansieringskällor\n- Motivering för varje betydande kostnadspost",
+        
+        "question8": "Hur mycket finansiering kan jag söka?",
+        "answer8": "Det finns ingen fast gräns för finansieringsbelopp. Du kan söka det belopp du behöver, förutsatt att du fullt ut kan motivera kostnaderna i din budget och visa hur projektet bidrar till att stärka banden mellan Belgien och Sverige."
+      },
+
+      "foundation": {
+        "title": "Stiftelsen",
+        "description1": "Syftet med stiftelsen är att stödja och utveckla banden mellan Belgien och Sverige som en hyllning till minnet av drottning Astrid av Belgien. Verksamheten bygger på donationer från generalkonsul Karl Erik Hedborg.",
+        "description2": "Stiftelsen delar ut bidrag två gånger per år. Bidrag kan delas ut för högre akademiska studier, forskningsutbyten, översättning av litterära eller vetenskapliga verk eller för att stödja konstutställningar, konserter och föreläsningar.",
+        "description3": "Stiftelsens styrelse fattar beslut om ansökningar vid sina två årliga möten i april och november. För att behandlas måste ansökningar nå stiftelsens sekreterare senast den 15 mars eller den 15 oktober.",
+        "buttonText": "Skapa en ny ansökan",
+        "subtitle": "Om oss"
+      },
+
+      "footer": {
+        "description": "Vi är en ideell organisation som förenar Belgien och Sverige genom kultur, kunskap och innovation.",
+        "contactUs": "Kontakta oss",
+        "privacyStatement": "Integritetspolicy"
+      }
+    
+  }
+  

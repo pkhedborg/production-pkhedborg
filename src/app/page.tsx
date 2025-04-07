@@ -1,103 +1,195 @@
-import Image from "next/image";
+"use client";
+  
+import Link from 'next/link';
+import { motion, LazyMotion, domAnimation } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 
-export default function Home() {
+// Dynamically import sections with loading boundary
+const FoundationSection = dynamic(() => import('@/components/sections/foundation-section'), {
+  loading: () => <div className="animate-pulse bg-gray-100 h-96" />
+});
+
+const ProjectSection = dynamic(() => import('@/components/sections/projects-section'), {
+  loading: () => <div className="animate-pulse bg-gray-100 h-96" />
+});
+
+// Simplified animations for mobile
+const fadeInUp = {
+  hidden: { opacity: 0 },
+  visible: { 
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  }
+};
+
+// Detect if user is on mobile
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile;
+};
+
+const videoVariants = {
+  hidden: { opacity: 0 },
+  visible: { 
+    opacity: 1,
+    transition: {
+      duration: 1.2
+    }
+  }
+};
+
+const BackgroundVideo = ({ isLoaded, onLoaded }: { isLoaded: boolean; onLoaded: () => void }) => (
+  <video
+    className={`w-full h-[600px] md:h-[800px] object-cover ${!isLoaded ? 'invisible' : ''}`}
+    src="/video/hero.webm"
+    autoPlay
+    loop
+    muted
+    playsInline
+    onLoadedData={onLoaded}
+    style={{ transform: 'translate3d(0, 0, 0)' }}
+  />
+);
+
+const HeroSection = () => {
+  const isMobile = useIsMobile();
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  // Simplified animations for mobile
+  const mobileVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <motion.section 
+      id="hero" 
+      className="relative bg-white w-full"
+      initial="hidden"
+      animate="visible"
+    >
+      <div className="mx-auto w-full">
+        <div className="relative w-full h-[600px] md:h-[800px] overflow-hidden">
+          {/* Video Background */}
+          <BackgroundVideo 
+            isLoaded={isVideoLoaded}
+            onLoaded={() => setIsVideoLoaded(true)}
+          />
+          
+          {/* Gradient Overlay */}
+          <motion.div 
+            variants={videoVariants}
+            className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"
+            aria-hidden="true"
+          />
+          
+          {/* Hero Content */}
+          <div className="absolute inset-0 flex flex-col justify-center items-center px-4 sm:px-8">
+            <motion.div 
+              className="relative z-20 max-w-3xl sm:text-center"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { 
+                  opacity: 1,
+                  transition: { duration: 0.5 }
+                }
+              }}
+            >
+              <div className="space-y-6 sm:space-y-8">
+                <h1 className="text-5xl sm:text-6xl md:text-7xl font-extralight text-white tracking-tight leading-none">
+                  <motion.span 
+                    className="block hover:translate-x-2 transition-transform duration-700"
+                    variants={isMobile ? mobileVariants : fadeInUp}
+                  >
+                    Bridging
+                  </motion.span>
+                  <motion.span 
+                    className="block font-light hover:translate-x-4 transition-transform duration-700"
+                    variants={isMobile ? mobileVariants : fadeInUp}
+                  >
+                    Belgium
+                  </motion.span>
+                  <motion.span 
+                    className="block font-light hover:translate-x-6 transition-transform duration-700"
+                    variants={isMobile ? mobileVariants : fadeInUp}
+                  >
+                    & Sweden
+                  </motion.span>
+                </h1>
+                
+                <motion.div
+                  variants={isMobile ? mobileVariants : fadeInUp}
+                >
+                  <Link 
+                    href="/application"
+                    className="inline-block text-base sm:text-lg md:text-xl text-white font-light tracking-wide 
+                      bg-[#252932] px-4 sm:px-6 py-2 sm:py-3 shadow-xl hover:bg-[#212632]/90 transition-all 
+                      duration-300 hover:translate-x-2 hover:shadow-2xl"
+                  >
+                    Apply now - application closing 1 May →
+                  </Link>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </motion.section>
   );
-}
+};
+
+const Home = () => {
+  const isMobile = useIsMobile();
+
+  return (
+    <LazyMotion features={domAnimation}>
+      <motion.div 
+        className="w-full"
+        initial="hidden"
+        animate="visible"
+      >
+        <HeroSection />
+        
+        {/* Foundation Section with Intersection Observer */}
+        <motion.section 
+          className="py-3 bg-white"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <FoundationSection />
+          </div>
+        </motion.section>
+
+        {/* Project Section with Intersection Observer */}
+        <motion.section 
+          className="py-8 sm:py-16 bg-white"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8 max-[640px]:w-screen max-[640px]:relative max-[640px]:left-[50%] max-[640px]:right-[50%] max-[640px]:mr-[-50vw] max-[640px]:ml-[-50vw]">
+            <ProjectSection />
+          </div>
+        </motion.section>
+      </motion.div>
+    </LazyMotion>
+  );
+};
+
+export default Home;
