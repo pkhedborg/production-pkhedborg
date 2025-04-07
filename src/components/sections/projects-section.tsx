@@ -6,8 +6,7 @@ import ProjectGrid from '../ui/ProjectGrid';
 import useSanityProjects from '../../sanity/hooks/useSanityProjects';
 import SkeletonLoader from '../ui/SkeletonLoader';
 import Image from 'next/image';
-import { useParams } from "next/navigation";
-import { useSanityArticle } from "../../sanity/hooks/useSanityArticle";
+import { useSanityArticle, Article } from "../../sanity/hooks/useSanityArticle";
 
 interface Project {
   _id: string;
@@ -37,7 +36,6 @@ interface ArticleHeader {
 }
 
 const ProjectSection = () => {
-  const { slug } = useParams();
   const { projects, isLoading: isProjectsLoading, error: projectsError } = useSanityProjects();
   const { articleHeader, isLoading: isHeaderLoading, error: headerError } = useSanityArticleHeader();
   const { articles, isLoading, error } = useSanityArticle();
@@ -47,18 +45,21 @@ const ProjectSection = () => {
   console.log('Article Header:', articleHeader);
   console.log('Loading States:', { isProjectsLoading, isHeaderLoading });
   console.log('Errors:', { projectsError, headerError });
-  // Filter to show only non-header articles
-  const carouselProjects = projects?.filter(project => !project.isHeaderArticle) || [];
-  console.log('Filtered Carousel Projects:', carouselProjects);
+  // Find the header article first
+  const headerArticle = articles?.find((article): article is Article & ArticleHeader => {
+    return article.isHeaderArticle === true;
+  });
+
+  // Filter to exclude header article and the current header article by ID
+  const carouselProjects: Project[] = projects?.filter(project => {
+    return !project.isHeaderArticle && project._id !== headerArticle?._id;
+  }) || [];
 
   // Function to truncate text to first few sentences
   const truncateText = (text: string) => {
     if (!text) return '';
     return text.length > 400 ? `${text.slice(0, 400)}...` : text;
   };
-
-  // Find the header article
-  const headerArticle = articles?.find(article => article.isHeaderArticle);
 
   if (isLoading) {
     return <div>Loading...</div>;

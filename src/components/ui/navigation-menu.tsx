@@ -7,12 +7,12 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
-interface MenuItem {
+export interface MenuItem {
   text: string;
   link: string;
 }
 
-interface NavigationMenuProps {
+export interface NavigationMenuProps {
   menuItems: MenuItem[];
 }
 

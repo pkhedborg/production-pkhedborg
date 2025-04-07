@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { client } from '../lib/sanity'
 
-interface Article {
+export interface Article {
   _id: string
   headline: string
   excerpt?: string

@@ -67,7 +67,7 @@ export default function RootLayout({
           <header>
             <NavigationMenu menuItems={menuItems} />
           </header>
-          <main className="flex-grow overflow-x-hidden sm:text-left pt-[190px]" id="main-content">
+          <main className="flex-grow">
             <div className="px-4 sm:px-0">
               {children}
             </div>

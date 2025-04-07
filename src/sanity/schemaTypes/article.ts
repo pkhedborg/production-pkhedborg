@@ -1,4 +1,17 @@
 import { defineType, defineField } from 'sanity'
+import { PreviewValue } from 'sanity'
+
+interface PrepareProps {
+  title?: string;
+  subtitle?: string | Date;
+  media?: {
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
+  isHeader?: boolean;
+}
 
 export default defineType({
   name: 'article',
@@ -181,12 +194,7 @@ export default defineType({
       media: 'mainImage.image',
       isHeader: 'isHeaderArticle'
     },
-    prepare(selection: {
-      title?: string;
-      subtitle?: string;
-      media?: any;
-      isHeader?: boolean;
-    }) {
+    prepare(selection: Record<string, any>): PreviewValue {
       const {title, subtitle, media, isHeader} = selection
       return {
         title: `${isHeader ? '📌 ' : ''}${title || ''}`,

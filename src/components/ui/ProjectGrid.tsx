@@ -13,7 +13,13 @@ interface Project {
   _id: string;
   headline: string;
   excerpt: string;
-  mainImage: any;
+  mainImage: {
+    image: {
+      asset: {
+        url: string;
+      };
+    };
+  };
 }
 
 interface ProjectGridProps {
@@ -35,10 +41,7 @@ const ProjectGrid = ({ projects, currentArticleId }: ProjectGridProps) => {
             <CarouselItem key={project._id} className="pl-4 md:basis-1/2 lg:basis-1/3 flex justify-center">
               <div className="w-[350px] h-[450px]">
                 <ProjectCard
-                  title={project.headline}
-                  cardDescription={project.excerpt}
-                  mainImage={project.mainImage}
-                  _id={project._id}
+                  project={project}
                 />
               </div>
             </CarouselItem>
