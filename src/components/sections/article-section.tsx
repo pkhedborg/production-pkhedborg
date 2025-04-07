@@ -7,6 +7,74 @@ import { useSanityArticle } from "../../sanity/hooks/useSanityArticle";
 import useSanityProjects from "../../sanity/hooks/useSanityProjects";
 import { PortableText, PortableTextComponents } from '@portabletext/react';
 
+interface SanityImage {
+  _type: 'image';
+  asset: {
+    _ref: string;
+    _type: 'reference';
+    url: string;
+  };
+  hotspot?: {
+    x: number;
+    y: number;
+    height: number;
+    width: number;
+  };
+  crop?: {
+    top: number;
+    bottom: number;
+    left: number;
+    right: number;
+  };
+}
+
+interface ImageSource {
+  name: string;
+  url?: string;
+}
+
+interface MediaContent {
+  type: 'youtube' | 'image';
+  image?: {
+    asset: {
+      _id: string;
+      url: string;
+    };
+    source?: ImageSource;
+  };
+  youtubeUrl?: string;
+}
+
+interface Candidate {
+  name: string;
+  occupation: string;
+  applicationPurpose: string;
+}
+
+interface Article {
+  _id: string;
+  headline: string;
+  excerpt?: string;
+  mainContent?: {
+    _type: string;
+    [key: string]: unknown;
+  }[];
+  mainImage?: {
+    image: SanityImage;
+    source?: ImageSource;
+  };
+  mediaContent?: MediaContent;
+  publishedAt: string;
+  genres?: string[];
+  readingTime?: number;
+  candidate?: Candidate;
+  isHeaderArticle: boolean;
+}
+
+interface PortableTextProps {
+  children?: React.ReactNode;
+}
+
 const ArticleSection = () => {
   const { slug } = useParams();
   
@@ -104,19 +172,13 @@ const ArticleSection = () => {
   // Update the PortableText components to handle both types
   const components: PortableTextComponents = {
     block: {
-      normal: (props) => {
-        // Debug the props to see what we're getting
-        console.log('Block props:', {
-          index: props.index,
-          totalBlocks: article.mainContent.length,
-          middlePoint: Math.floor(article.mainContent.length / 2),
-          text: props.children?.toString().slice(0, 50) + '...'
-        });
-
+      normal: ({children}: PortableTextProps) => {
+        const textContent = children?.toString() || '';
+        const isBreakPoint = textContent.endsWith('.');
         return (
           <>
-            <p className="mb-6">{props.children}</p>
-            {props.index === Math.floor(article.mainContent.length / 2) && article?.mediaContent && (
+            <p className="mb-6">{children}</p>
+            {isBreakPoint && article?.mediaContent && (
               <>
                 {/* YouTube Video */}
                 {article.mediaContent.type === 'youtube' && article.mediaContent.youtubeUrl && (
@@ -135,21 +197,19 @@ const ArticleSection = () => {
                 
                 {/* Additional Image */}
                 {article.mediaContent.type === 'image' && article.mediaContent.image?.asset?.url && (
-                  <figure className="my-8 w-full">
-                    <div className="bg-gray-50 w-full aspect-[4/3] relative">
+                  <figure className="my-12">
+                    <div className="relative w-full aspect-[16/9]">
                       <Image
                         src={article.mediaContent.image.asset.url}
                         alt="Article media"
                         fill
                         className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 800px"
                       />
                     </div>
                     {article.mediaContent.image.source && (
-                      <figcaption className="text-sm text-gray-600 mt-2 w-full">
+                      <figcaption className="text-sm text-gray-600 mt-2 text-center">
                         Source: {article.mediaContent.image.source.name}
-                        {article.mediaContent.image.source.url && (
-                          <span className="text-gray-500 italic"> ({article.mediaContent.image.source.name})</span>
-                        )}
                       </figcaption>
                     )}
                   </figure>
@@ -161,6 +221,9 @@ const ArticleSection = () => {
       }
     }
   };
+
+  // Filter out the current article from related articles
+  const relatedProjects = projects?.filter(project => project._id !== slug) || [];
 
   return (
     <div className="article-container relative">
@@ -283,14 +346,14 @@ const ArticleSection = () => {
         <div className="md:col-span-2">
           <article className="w-full px-4 md:px-0">
             {/* Reading time */}
-            <div className="container mx-auto max-w-xl">
+            <div className="container mx-auto max-w-3xl">
               <div className="text-gray-500 text-sm mb-12 mt-8">
                 {article.readingTime} min read
               </div>
             </div>
 
             {/* Main text content */}
-            <div className="container mx-auto max-w-xl prose prose-lg">
+            <div className="container mx-auto max-w-3xl prose prose-lg">
               <div className="text-lg leading-relaxed text-gray-800">
                 {article.excerpt && (
                   <p className="font-semibold mb-6">{article.excerpt}</p>
@@ -312,11 +375,8 @@ const ArticleSection = () => {
         <h2 className="text-2xl font-bold text-center mb-12">More Articles</h2>
         {isProjectsLoading && <div>Loading more articles...</div>}
         {projectsError && <div>Error loading articles: {projectsError.message}</div>}
-        {!isProjectsLoading && projects && projects.length > 0 && (
-          <ProjectGrid 
-            projects={projects} 
-            currentArticleId={article._id}
-          />
+        {!isProjectsLoading && relatedProjects.length > 0 && (
+          <ProjectGrid projects={relatedProjects} />
         )}
       </div>
     </div>

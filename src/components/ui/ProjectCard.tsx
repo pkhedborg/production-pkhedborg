@@ -32,6 +32,7 @@ const ProjectCard = ({ project, priority = false }: ProjectCardProps) => {
           fill
           className="object-cover"
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+          priority={priority}
         />
       </div>
       <div className="p-4 sm:p-5 md:p-6 flex flex-col flex-grow">

@@ -5,15 +5,28 @@ export interface Article {
   _id: string
   headline: string
   excerpt?: string
-  mainContent?: any
+  mainContent?: {
+    _type: string
+    [key: string]: unknown
+  }
   mainImage?: {
     image: {
       asset: {
         _id: string
         url: string
       }
-      hotspot?: any
-      crop?: any
+      hotspot?: {
+        x: number
+        y: number
+        height: number
+        width: number
+      }
+      crop?: {
+        top: number
+        bottom: number
+        left: number
+        right: number
+      }
     }
     source?: {
       name: string

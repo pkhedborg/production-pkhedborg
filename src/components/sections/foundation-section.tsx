@@ -232,7 +232,13 @@ const FoundationSection = () => {
             }
           ].map((card, index) => (
             <Link href={card.link} key={index}>
-              <div className="bg-white h-full cursor-pointer group transition-all duration-300 hover:shadow-xl">
+              <motion.div 
+                className="bg-white h-full cursor-pointer group transition-all duration-300 hover:shadow-xl"
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              >
                 <div className="overflow-hidden">
                   <card.ImageComponent />
                 </div>
@@ -249,7 +255,7 @@ const FoundationSection = () => {
                     </span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </Link>
           ))}
         </div>
