@@ -181,7 +181,7 @@ const Home = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[1550px] px-4 sm:px-6 lg:px-8">
             <ProjectSection />
           </div>
         </motion.section>

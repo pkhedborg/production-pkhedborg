@@ -1,5 +1,16 @@
-import { defineType, defineField } from 'sanity'
-import { PreviewValue } from 'sanity'
+import { defineType, defineField, PortableTextBlock } from 'sanity'
+
+interface PrepareProps {
+  title?: string;
+  subtitle?: string | Date;
+  media?: {
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
+  isHeader?: boolean;
+}
 
 export default defineType({
   name: 'article',
@@ -182,10 +193,14 @@ export default defineType({
       media: 'mainImage.image',
       isHeader: 'isHeaderArticle'
     },
-    prepare(selection: Record<string, any>): PreviewValue {
-      const {title, subtitle, media, isHeader} = selection
+    prepare({
+      title = '',
+      subtitle = '',
+      media = null,
+      isHeader = false
+    }) {
       return {
-        title: `${isHeader ? '📌 ' : ''}${title || ''}`,
+        title: `${isHeader ? '📌 ' : ''}${title}`,
         subtitle,
         media
       }
