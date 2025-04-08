@@ -8,8 +8,6 @@ import I18nProvider from '../components/providers/I18nProvider';
 import { NavigationMenu } from "@/components/ui/navigation-menu";
 import ClientFooter from "@/components/ui/footer";
 import { useTranslation } from "react-i18next";
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Custom fonts setup
 const geistSans = localFont({
@@ -53,10 +51,7 @@ export default function RootLayout({
   ];
 
   return (
-    <html 
-      lang="en" 
-      className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} ${merriweather.variable} overflow-x-hidden`}
-    >
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} ${merriweather.variable}`}>
       <Script
         id="Cookiebot"
         strategy="afterInteractive"
@@ -65,23 +60,21 @@ export default function RootLayout({
         data-blockingmode="auto"
       />
       <body
-        className={`${merriweather.variable} font-serif antialiased flex flex-col min-h-screen overflow-x-hidden bg-white`}
+        className={`${merriweather.variable} font-serif antialiased flex flex-col min-h-screen max-w-[2000px] mx-auto w-full overflow-x-hidden`}
         aria-labelledby="main-content"
       >        
         <I18nProvider>
-          <div className="max-w-[2000px] mx-auto w-full relative">
-            <header>
-              <NavigationMenu menuItems={menuItems} />
-            </header>
-            <main className="flex-grow">
+          <header>
+            <NavigationMenu menuItems={menuItems} />
+          </header>
+          <main className="flex-grow">
+            <div className="px-4 sm:px-0">
               {children}
-            </main>
-            <footer className="w-full">
-              <ClientFooter />
-            </footer>
-          </div>
-          <Analytics />
-          <SpeedInsights />
+            </div>
+          </main>
+          <footer className="w-screen relative left-[50%] right-[50%] mr-[-50vw] ml-[-50vw]">
+            <ClientFooter />
+          </footer>
         </I18nProvider>
       </body>
     </html>
