@@ -70,9 +70,8 @@ const ProjectSection = () => {
   }
 
   return (
-    <section className="project-section py-16 bg-[#252932] text-white">
-      {/* Override container width on mobile, respect max-width on desktop */}
-      <div className="relative left-[50%] right-[50%] mx-[-50vw] md:mx-auto md:left-auto md:right-auto md:max-w-[2000px] md:container py-10 px-4">
+    <section className="project-section py-16 bg-[#252932] text-white w-full">
+      <div className="w-full md:container md:mx-auto md:max-w-[2000px] px-4">
         {/* Header Article */}
         {isHeaderLoading ? (
           <div className="w-full lg:w-1/2">
@@ -119,7 +118,7 @@ const ProjectSection = () => {
         ) : null}
 
         {/* Carousel Projects */}
-        <div className="w-full max-w-none py-10 px-4">
+        <div className="w-full py-10">
           <h2 className="text-xl sm:text-2xl font-bold text-center mb-8 sm:mb-12">More Articles</h2>
 
           {isProjectsLoading ? (
