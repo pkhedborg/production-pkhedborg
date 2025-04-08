@@ -9,6 +9,7 @@ import { NavigationMenu } from "@/components/ui/navigation-menu";
 import ClientFooter from "@/components/ui/ClientFooter";
 import { useTranslation } from "react-i18next";
 
+
 // Custom fonts setup
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -51,7 +52,11 @@ export default function RootLayout({
   ];
 
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} ${merriweather.variable}`}>
+    <html 
+      lang="en" 
+      className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} ${merriweather.variable} overflow-x-hidden light`}
+      style={{ colorScheme: 'light' }}
+    >
       <Script
         id="Cookiebot"
         strategy="afterInteractive"
@@ -60,21 +65,22 @@ export default function RootLayout({
         data-blockingmode="auto"
       />
       <body
-        className={`${merriweather.variable} font-serif antialiased flex flex-col min-h-screen max-w-[2000px] mx-auto w-full overflow-x-hidden`}
+        className={`${merriweather.variable} font-serif antialiased flex flex-col min-h-screen overflow-x-hidden bg-white text-black`}
+        style={{ backgroundColor: 'white' }}
         aria-labelledby="main-content"
       >        
         <I18nProvider>
-          <header>
-            <NavigationMenu menuItems={menuItems} />
-          </header>
-          <main className="flex-grow">
-            <div className="px-4 sm:px-0">
+          <div className="max-w-[2000px] mx-auto w-full relative bg-white">
+            <header>
+              <NavigationMenu menuItems={menuItems} />
+            </header>
+            <main className="flex-grow bg-white">
               {children}
-            </div>
-          </main>
-          <footer className="w-screen relative left-[50%] right-[50%] mr-[-50vw] ml-[-50vw]">
-            <ClientFooter />
-          </footer>
+            </main>
+            <footer className="w-full bg-white">
+              <ClientFooter />
+            </footer>
+          </div>
         </I18nProvider>
       </body>
     </html>
