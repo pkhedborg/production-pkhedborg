@@ -2,7 +2,7 @@ const Privacy = () => {
   return (
     <div className="w-full">
       {/* Header Section */}
-      <section className="w-full bg-[#221e1b] text-white py-20 text-center mt-1">
+      <section className="w-full bg-[#221e1b] text-white py-20 text-center mt-25">
         <h1 className="text-4xl font-bold">Privacy Policy</h1>
         <p className="text-lg text-gray-300 mt-2">
           Petra and Karl Erik Hedborg Foundation

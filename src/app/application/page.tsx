@@ -142,7 +142,7 @@ export default function ApplicationPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section with Optimized Image */}
-      <div className="relative h-[300px] md:h-[400px] bg-[#252932]">
+      <div className="relative h-[300px] md:h-[400px] bg-[#252932] mt-20  ">
         <div className="absolute inset-0">
           <ApplyImage />
           <div className="absolute inset-0 bg-black/30" />

@@ -71,7 +71,8 @@ const ProjectSection = () => {
 
   return (
     <section className="project-section py-16 bg-[#252932] text-white">
-      <div className="container mx-auto max-w-[2400px] py-10 px-4">
+      {/* Override container width on mobile, respect max-width on desktop */}
+      <div className="relative left-[50%] right-[50%] mx-[-50vw] md:mx-auto md:left-auto md:right-auto md:max-w-[2000px] md:container py-10 px-4">
         {/* Header Article */}
         {isHeaderLoading ? (
           <div className="w-full lg:w-1/2">
