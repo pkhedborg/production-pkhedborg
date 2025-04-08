@@ -1,4 +1,4 @@
-// src/pages/Article.tsx
+"use client";
 
 import ArticleSection from "@/components/sections/article-section";
 
