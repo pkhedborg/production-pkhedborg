@@ -27,10 +27,11 @@ const History = () => {
 
   return (
     <div className="history-page w-full">
-      {/* Hero Section with Optimized Image */}
-      <section className="relative h-[60vh] md:h-screen bg-[#252932]">
+      {/* Hero Section with Optimized Image - No Animation */}
+      <section className="relative h-[60vh] md:h-screen">
         <div className="absolute inset-0">
           <HistoryImage />
+          {/* Fixed overlay opacity */}
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="absolute inset-0 flex flex-col justify-center items-center px-8">
