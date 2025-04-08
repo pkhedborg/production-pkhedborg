@@ -6,7 +6,7 @@ import "./globals.css";
 import Script from 'next/script'
 import I18nProvider from '../components/providers/I18nProvider';
 import { NavigationMenu } from "@/components/ui/navigation-menu";
-import Footer from "@/components/ui/footer";
+import ClientFooter from "@/components/ui/ClientFooter";
 import { useTranslation } from "react-i18next";
 
 // Custom fonts setup
@@ -73,7 +73,7 @@ export default function RootLayout({
             </div>
           </main>
           <footer className="w-screen relative left-[50%] right-[50%] mr-[-50vw] ml-[-50vw]">
-            <Footer />
+            <ClientFooter />
           </footer>
         </I18nProvider>
       </body>
