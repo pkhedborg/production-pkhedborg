@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff !important;
+  --foreground: #171717 !important;
   --foreground-rgb: 222.2 84% 4.9%;
   --primary: 222.2 47.4% 11.2%;
   --primary-foreground: 210 40% 98%;
@@ -19,27 +19,33 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Remove dark mode preferences */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff !important;
+    --foreground: #171717 !important;
   }
 }
 
+html {
+  background-color: white !important;
+  color-scheme: light !important;
+}
+
 body {
-  background: var(--background);
+  background: white !important;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Navbar Styling */
 .navbar {
-  background-color: white;
+  background-color: white !important;
   width: 100%;
   z-index: 50;
   padding: 1rem 0;
   transition: box-shadow 0.3s ease;  /* Smooth transition for shadow */
-  color: white;
+  color: var(--foreground) !important;
 }
 
 /* Remove the default shadow and add it only when scrolled class is present */
