@@ -88,7 +88,7 @@ export function NavigationMenu({ menuItems }: NavigationMenuProps) {
         id="navigation-menu"
         className={`fixed right-0 top-0 z-40 h-full transform bg-background shadow-xl transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } w-[250px] sm:w-[300px] md:w-[350px] lg:max-w-[400px]`}
+        } w-full lg:w-[350px]`}
       >
         {/* Close button inside menu */}
         <button

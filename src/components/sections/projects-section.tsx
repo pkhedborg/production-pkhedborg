@@ -78,7 +78,7 @@ const ProjectSection = () => {
             <SkeletonLoader />
           </div>
         ) : headerArticle ? (
-          <div className="flex flex-col-reverse lg:flex-row w-full gap-8">
+          <div className="flex flex-col-reverse lg:flex-row w-full gap-4 lg:gap-6">
             {/* Content Section */}
             <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 leading-tight">
@@ -118,7 +118,7 @@ const ProjectSection = () => {
         ) : null}
 
         {/* Carousel Projects */}
-        <div className="w-full py-10">
+        <div className="w-full py-10 px-2 sm:px-4 md:px-6 lg:px-8">
           <h2 className="text-xl sm:text-2xl font-bold text-center mb-8 sm:mb-12">More Articles</h2>
 
           {isProjectsLoading ? (
