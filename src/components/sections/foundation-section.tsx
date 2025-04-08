@@ -12,107 +12,37 @@ import CardThreeImage from '@/components/Images/OptimizedCardThreeImage';
 const FoundationSection = () => {
   const { t } = useTranslation();
 
-  const fadeInUp = {
-    hidden: { 
-      opacity: 0, 
-      y: 30
-    },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.2, 0.65, 0.3, 0.9]
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 30
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.2, 0.65, 0.3, 0.9]
-      }
-    }
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.1,
-        duration: 0.6,
-        ease: [0.2, 0.65, 0.3, 0.9]
-      }
-    }
-  };
-
   return (
     <section className="relative py-20 bg-white">
-      <motion.div 
-        className="container mx-auto px-4 grid grid-cols-1 xl:grid-cols-2 items-start gap-12"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={staggerContainer}
-      >
+      <div className="container mx-auto px-4 grid grid-cols-1 xl:grid-cols-2 items-start gap-12">
         {/* Left Side - Foundation Image */}
-        <motion.div 
-          className="w-full"
-          variants={fadeInUp}
-        >
+        <div className="w-full">
           <FoundationImage />
-        </motion.div>
+        </div>
 
         {/* Right Side - Text Content */}
-        <motion.div 
-          className="space-y-6 mt-8 xl:mt-0"
-          variants={staggerContainer}
-        >
-          <motion.h3 
-            className="text-gray-600 uppercase tracking-wider"
-            variants={fadeInUp}
-          >
+        <div className="space-y-6 mt-8 xl:mt-0">
+          <h3 className="text-gray-600 uppercase tracking-wider">
             {t('foundation.subtitle')}
-          </motion.h3>
-          <motion.h2 
-            className="text-5xl font-bold text-gray-900"
-            variants={fadeInUp}
-          >
+          </h3>
+          <h2 className="text-5xl font-bold text-gray-900">
             {t('foundation.title')}
-          </motion.h2>
-          <motion.div className="space-y-6 text-gray-700 text-lg">
-            <motion.p variants={fadeInUp}>
-              {t('foundation.description1')}
-            </motion.p>
-            <motion.p variants={fadeInUp}>
-              {t('foundation.description2')}
-            </motion.p>
-            <motion.p variants={fadeInUp}>
-              {t('foundation.description3')}
-            </motion.p>
-          </motion.div>
-          <motion.div 
-            className="flex justify-center md:justify-start"
-            variants={fadeInUp}
-          >
+          </h2>
+          <div className="space-y-6 text-gray-700 text-lg">
+            <p>{t('foundation.description1')}</p>
+            <p>{t('foundation.description2')}</p>
+            <p>{t('foundation.description3')}</p>
+          </div>
+          <div className="flex justify-center md:justify-start">
             <Link 
               href="/application" 
               className="mt-6 inline-block px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-all duration-300 hover:translate-x-1"
             >
               {t('foundation.buttonText')} &rarr;
             </Link>
-          </motion.div>
-        </motion.div>
-      </motion.div>
+          </div>
+        </div>
+      </div>
 
       {/* Divider Line */}
       <motion.div 
@@ -127,17 +57,11 @@ const FoundationSection = () => {
       />
 
       {/* Numbers Section Header */}
-      <motion.div 
-        className="container mx-auto text-center"
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
+      <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-20">
           {t('impact.title')}
         </h2>
-      </motion.div>
+      </div>
 
       {/* Counter Section */}
       <div className="container mx-auto px-4 mt-20">
@@ -184,28 +108,16 @@ const FoundationSection = () => {
       />
 
       {/* More about the foundation */}
-      <motion.div 
-        className="container mx-auto sm:text-center mb-8"
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-      </motion.div>
+      <div className="container mx-auto sm:text-center mb-8">
+      </div>
 
       {/* Cards Section */}
       <div className="container mx-auto mt-20 px-4">
-        <motion.div 
-          className="text-center mb-16"
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900">
             {t('moreAbout.title')}
           </h2>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 xl:gap-12">
           {[
@@ -232,13 +144,7 @@ const FoundationSection = () => {
             }
           ].map((card, index) => (
             <Link href={card.link} key={index}>
-              <motion.div 
-                className="bg-white h-full cursor-pointer group transition-all duration-300 hover:shadow-xl"
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-              >
+              <div className="bg-white h-full cursor-pointer group transition-all duration-300 hover:shadow-xl">
                 <div className="overflow-hidden">
                   <card.ImageComponent />
                 </div>
@@ -255,7 +161,7 @@ const FoundationSection = () => {
                     </span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </Link>
           ))}
         </div>

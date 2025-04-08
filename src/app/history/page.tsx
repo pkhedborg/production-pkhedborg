@@ -16,28 +16,6 @@ import {
 const History = () => {
   const { t } = useTranslation();
 
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
   const boardMembers = [
     { image: "urban", name: "urban" },
     { image: "thomas", name: "thomas" },
@@ -50,98 +28,62 @@ const History = () => {
   return (
     <div className="history-page w-full">
       {/* Hero Section with Optimized Image */}
-      <motion.section
-        initial={{ opacity: 0.4 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="relative h-[60vh] md:h-screen bg-[#252932]"
-      >
+      <section className="relative h-[60vh] md:h-screen bg-[#252932]">
         <div className="absolute inset-0">
           <HistoryImage />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="absolute inset-0 flex flex-col justify-center items-center px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative z-20 max-w-3xl"
-          >
+          <div className="relative z-20 max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center">
               {t("history.heroTitle")}
             </h1>
-          </motion.div>
+          </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Stats Section */}
-      <motion.section 
-        className="py-16 bg-white text-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={staggerContainer}
-      >
+      <section className="py-16 bg-white text-center">
         <div className="container mx-auto">
-          <motion.h2 
-            className="text-3xl font-bold mb-8"
-            variants={fadeInUp}
-          >
+          <h2 className="text-3xl font-bold mb-8">
             {t("history.impactTitle")}
-          </motion.h2>
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            variants={staggerContainer}
-          >
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { value: 500, text: "history.projectsSponsored" },
               { value: 1500000, text: "history.grantsDistributed", decimal: 2 },
               { value: 40, text: "history.yearsOfSupport" }
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={fadeInUp}
-                whileHover={{ y: -5 }}
-                transition={{ duration: 0.2 }}
+                className="transition-transform duration-200 hover:-translate-y-1"
               >
                 <h3 className="text-5xl font-bold text-red-600">
                   <NumberTicker value={stat.value} decimalPlaces={stat.decimal} />
                 </h3>
                 <p className="text-lg">{t(stat.text)}</p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Foundation History Section */}
-      <motion.section 
-        className="py-20 px-4 lg:px-8 bg-gray-100 text-left"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={staggerContainer}
-      >
+      <section className="py-20 px-4 lg:px-8 bg-gray-100 text-left">
         <div className="container mx-auto">
-          <motion.div 
-            className="max-w-3xl mx-auto mb-16 text-left"
-            variants={fadeInUp}
-          >
+          <div className="max-w-3xl mx-auto mb-16 text-left">
             <h2 className="text-4xl font-bold mb-6 text-left">{t("history.foundationTitle")}</h2>
             <p className="text-lg text-gray-700 leading-relaxed text-left">{t("history.foundationText1")}</p>
             <p className="text-lg text-gray-700 leading-relaxed mt-6 text-left">{t("history.foundationText2")}</p>
             <p className="text-lg text-gray-700 leading-relaxed mt-6 text-left">{t("history.foundationText3")}</p>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="max-w-3xl mx-auto mb-16 text-left"
-            variants={fadeInUp}
-          >
+          <div className="max-w-3xl mx-auto mb-16 text-left">
             <h2 className="text-4xl font-bold mb-6 text-left">{t("history.karlErikTitle")}</h2>
             <p className="text-lg text-gray-700 leading-relaxed text-left">{t("history.karlErikText1")}</p>
             <p className="text-lg text-gray-700 leading-relaxed mt-6 text-left">{t("history.karlErikText2")}</p>
             <p className="text-lg text-gray-700 leading-relaxed mt-6 text-left">{t("history.karlErikText3")}</p>
-          </motion.div>
+          </div>
 
           <motion.div 
             className="w-full h-px bg-gray-200 my-12"
@@ -154,18 +96,12 @@ const History = () => {
           {/* Board Section */}
           <section className="py-20 px-4 lg:px-8 bg-gray-100">
             <div className="container mx-auto">
-              <motion.h2 
-                className="text-3xl font-bold mb-6 text-center"
-                variants={fadeInUp}
-              >
+              <h2 className="text-3xl font-bold mb-6 text-center">
                 {t("history.boardTitle")}
-              </motion.h2>
-              <motion.p 
-                className="text-lg text-gray-500 mb-12 text-center"
-                variants={fadeInUp}
-              >
+              </h2>
+              <p className="text-lg text-gray-500 mb-12 text-center">
                 {t("history.boardDescription")}
-              </motion.p>
+              </p>
 
               {/* Mobile View */}
               <div className="block md:hidden">
@@ -206,12 +142,7 @@ const History = () => {
                     key={`desktop-${index}`}
                     className="text-center group"
                   >
-                    <motion.div 
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.2 }}
-                      className="transform transition-transform duration-200 group-hover:-translate-y-2"
-                    >
+                    <div className="transition-transform duration-200 group-hover:-translate-y-2">
                       <div className="relative w-64 h-64 mx-auto mb-4">
                         <BoardImage 
                           member={member.image}
@@ -226,14 +157,14 @@ const History = () => {
                           {t(`history.boardMembers.${member.name}.role`)}
                         </p>
                       </div>
-                    </motion.div>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
           </section>
         </div>
-      </motion.section>
+      </section>
     </div>
   );
 };
