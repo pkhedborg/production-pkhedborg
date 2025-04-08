@@ -1,7 +1,7 @@
 "use client"; // Mark this file as a client component
 
 import localFont from "next/font/local";
-import { Raleway, Merriweather } from 'next/font/google';
+import { Plus_Jakarta_Sans } from 'next/font/google';
 import "./globals.css";
 import Script from 'next/script'
 import I18nProvider from '../components/providers/I18nProvider';
@@ -9,31 +9,11 @@ import { NavigationMenu } from "@/components/ui/navigation-menu";
 import ClientFooter from "@/components/ui/ClientFooter";
 import { useTranslation } from "react-i18next";
 
-
 // Custom fonts setup
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-const raleway = Raleway({ 
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-raleway'
-});
-
-const merriweather = Merriweather({ 
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-merriweather'
+  variable: '--font-jakarta',
 });
 
 // RootLayout component
@@ -54,7 +34,7 @@ export default function RootLayout({
   return (
     <html 
       lang="en" 
-      className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} ${merriweather.variable} overflow-x-hidden light`}
+      className={`${jakarta.variable} overflow-x-hidden light`}
       style={{ colorScheme: 'light' }}
     >
       <Script
@@ -65,7 +45,7 @@ export default function RootLayout({
         data-blockingmode="auto"
       />
       <body
-        className={`${merriweather.variable} font-serif antialiased flex flex-col min-h-screen overflow-x-hidden bg-white text-black`}
+        className={`${jakarta.variable} font-sans antialiased flex flex-col min-h-screen overflow-x-hidden bg-white text-black`}
         style={{ backgroundColor: 'white' }}
         aria-labelledby="main-content"
       >        

@@ -71,14 +71,14 @@ const ProjectSection = () => {
 
   return (
     <section className="relative w-screen md:w-full left-[50%] right-[50%] translate-x-[-50%] md:translate-x-0 md:left-0 md:right-0 py-16 bg-[#252932] text-white">
-      <div className="max-w-[2000px] mx-auto px-4">
+      <div className="max-w-[2000px] mx-auto px-4 sm:px-6 md:px-8">
         {/* Header Article */}
         {isHeaderLoading ? (
           <div className="w-full lg:w-1/2">
             <SkeletonLoader />
           </div>
         ) : headerArticle ? (
-          <div className="flex flex-col-reverse lg:flex-row w-full gap-4 lg:gap-6">
+          <div className="flex flex-col-reverse lg:flex-row w-full gap-3 lg:gap-4">
             {/* Content Section */}
             <div className="w-full lg:w-1/2 text-center lg:text-left lg:pl-8">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 leading-tight">

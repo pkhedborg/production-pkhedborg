@@ -100,12 +100,12 @@ export function NavigationMenu({ menuItems }: NavigationMenuProps) {
         </button>
 
         <div className="flex h-full flex-col p-6">
-          <div className="mt-12 flex flex-col space-y-4">
+          <div className="mt-12 flex flex-col items-center space-y-4">
             {menuItems.map((item, index) => (
               <Link
                 key={index}
                 href={item.link}
-                className={`rounded-md px-4 py-3 text-base font-medium transition-colors hover:bg-muted ${
+                className={`rounded-md px-4 py-3 text-base font-medium transition-colors hover:bg-muted text-center w-full ${
                   pathname === item.link ? "bg-muted text-primary" : "text-foreground"
                 } sm:py-4 sm:text-lg`}
                 onClick={() => setIsOpen(false)}
