@@ -1,6 +1,5 @@
 "use client"; // Mark this file as a client component
 
-import localFont from "next/font/local";
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import "./globals.css";
 import Script from 'next/script'
