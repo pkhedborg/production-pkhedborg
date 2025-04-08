@@ -6,7 +6,7 @@ import "./globals.css";
 import Script from 'next/script'
 import I18nProvider from '../components/providers/I18nProvider';
 import { NavigationMenu } from "@/components/ui/navigation-menu";
-import ClientFooter from "@/components/ui/footer";
+import ClientFooter from "@/components/ui/ClientFooter";
 import { useTranslation } from "react-i18next";
 
 // Custom fonts setup

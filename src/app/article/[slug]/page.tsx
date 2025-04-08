@@ -1,3 +1,4 @@
+// src/pages/Article.tsx
 
 import ArticleSection from "@/components/sections/article-section";
 
