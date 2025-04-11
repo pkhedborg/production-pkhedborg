@@ -70,7 +70,7 @@ const ProjectSection = () => {
   }
 
   return (
-    <section className="relative w-screen md:w-full left-[50%] right-[50%] translate-x-[-50%] md:translate-x-0 md:left-0 md:right-0 py-16 bg-[#252932] text-white">
+    <section className="relative w-screen lg:w-full left-[50%] right-[50%] translate-x-[-50%] lg:translate-x-0 lg:left-0 lg:right-0 py-16 bg-[#252932] text-white">
       <div className="max-w-[2000px] mx-auto px-4 sm:px-6 md:px-8">
         {/* Header Article */}
         {isHeaderLoading ? (

@@ -209,9 +209,9 @@ const ArticleSection = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-0 md:px-4">
         {/* Sidebar Information */}
         <aside className="md:col-span-1 mb-8 md:mb-0 mt-8">
-          {/* Florence Headshot */}
-          <div className="w-full flex flex-col items-center mb-8">
-            <div className="relative w-[120px] h-[120px] rounded-full overflow-hidden mb-4">
+          {/* Florence Headshot - Updated size */}
+          <div className="w-full flex flex-col items-center mb-6">
+            <div className="relative w-[90px] h-[90px] rounded-full overflow-hidden mb-3">
               <picture>
                 <source
                   srcSet="/icons/Headshot/Florence/Florence_1x.webp 1x, 
@@ -226,12 +226,12 @@ const ArticleSection = () => {
                   alt="Florence Headshot"
                   fill
                   className="object-cover"
-                  sizes="120px"
+                  sizes="90px"
                   priority
                 />
               </picture>
             </div>
-            <h2 className="text-2xl font-serif">By Florence Oppenheim</h2>
+            <h2 className="text-xl font-serif">By Florence Oppenheim</h2>
           </div>
 
           {/* Divider */}

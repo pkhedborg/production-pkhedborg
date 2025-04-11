@@ -24,10 +24,10 @@ export default function RootLayout({
   const { t } = useTranslation();
 
   const menuItems = [
-    { text: t("nav.home"), link: "/" },
-    { text: t("nav.history"), link: "/history" },
-    { text: t("nav.apply"), link: "/application" },
-    { text: t("nav.contact"), link: "/contact" },
+    { text: t("home.hero.title"), link: "/" },
+    { text: t("history.heroTitle"), link: "/history" },
+    { text: t("application.heroTitle"), link: "/application" },
+    { text: t("contactUs.heading"), link: "/contact" },
   ];
 
   return (
