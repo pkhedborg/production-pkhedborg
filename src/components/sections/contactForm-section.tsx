@@ -170,6 +170,10 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
     year: '',
     amount: ''
   });
+  const [files, setFiles] = useState<{ [key: string]: File[] }>({
+    cv: [],
+    additional: [],
+  });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -333,7 +337,8 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
                       type="number"
                       placeholder={t("contactForm.amountPlaceholder")}
                       {...field}
-                      onChange={(e) => field.onChange(Number(e.target.value))}
+                      value={field.value === 0 ? "" : field.value}
+                      onChange={(e) => field.onChange(e.target.value === "" ? 0 : Number(e.target.value))}
                       min={0}
                       max={100000}
                     />
@@ -538,7 +543,7 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
                 onChange={(e) => {
                   const file = e.target.files?.[0];
                   if (file) {
-                    setAttachments([{ type: 'cv', file }]);
+                    setFiles({ ...files, cv: [file] });
                   }
                 }}
               />
@@ -556,10 +561,7 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
                 className="mt-2"
                 onChange={(e) => {
                   const files = Array.from(e.target.files || []);
-                  setAttachments(current => [
-                    ...current,
-                    ...files.map(file => ({ type: 'additional', file }))
-                  ]);
+                  setFiles({ ...files, additional: files });
                 }}
                 accept=".pdf,.doc,.docx,.txt,.rtf,.odt,.xlsx,.xls,.csv,.ppt,.pptx"
               />
@@ -680,29 +682,9 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
 
   return (
     <div className="relative">
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-2">{t("contactForm.formTitle")}</h2>
-        <p className="text-gray-600">{t("contactForm.intro1")}</p>
-      </div>
-
+      <StepIndicator currentStep={currentStep} />
+      
       <div className="relative">
-        <div className="mb-8">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold">
-              {t(`application.steps.${currentStep}.title`)}
-            </h3>
-            <div className="text-sm text-gray-500">
-              {t("application.stepIndicator.step")} {currentStep} of 5
-            </div>
-          </div>
-          <div className="h-2 bg-gray-200 rounded-full">
-            <div
-              className="h-full bg-blue-600 rounded-full transition-all duration-300"
-              style={{ width: `${(currentStep / 5) * 100}%` }}
-            />
-          </div>
-        </div>
-
         <div className="hidden md:block absolute right-[-400px] top-1/2 transform -translate-y-1/2">
           <div className="relative w-[350px] h-[350px]">
             <OptimizeHelpImage />
