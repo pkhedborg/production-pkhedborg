@@ -329,28 +329,16 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t("contactForm.amount")}</FormLabel>
-                  <div className="space-y-4">
-                    <Slider
+                  <FormControl>
+                    <Input
+                      type="number"
+                      placeholder={t("contactForm.amountPlaceholder")}
+                      {...field}
+                      onChange={(e) => field.onChange(Number(e.target.value))}
                       min={0}
                       max={100000}
-                      step={1000}
-                      value={[field.value || 0]}
-                      onValueChange={(value) => {
-                        field.onChange(value[0]);
-                      }}
-                      className="w-full"
                     />
-                    <div className="flex justify-between items-center">
-                      <FormControl>
-                        <div className="text-lg font-semibold">
-                          €{field.value?.toLocaleString() || '0'}
-                        </div>
-                      </FormControl>
-                      <div className="text-sm text-gray-500">
-                        Max: €100,000
-                      </div>
-                    </div>
-                  </div>
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}

@@ -24,7 +24,6 @@ export default function RootLayout({
   const { t } = useTranslation();
 
   const menuItems = [
-    { text: t("home.hero.title"), link: "/" },
     { text: t("history.heroTitle"), link: "/history" },
     { text: t("application.heroTitle"), link: "/application" },
     { text: t("contactUs.heading"), link: "/contact" },
