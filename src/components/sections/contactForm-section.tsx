@@ -17,7 +17,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
 
 // Updated schema to include all form fields across steps
 const formSchema = z.object({
