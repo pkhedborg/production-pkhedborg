@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import OptimizeHelpImage from "@/components/Images/OptimizeHelpImage";
 
 // Updated schema to include all form fields across steps
 const formSchema = z.object({
@@ -333,7 +334,8 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
                       type="number"
                       placeholder={t("contactForm.amountPlaceholder")}
                       {...field}
-                      onChange={(e) => field.onChange(Number(e.target.value))}
+                      value={field.value === 0 ? "" : field.value}
+                      onChange={(e) => field.onChange(e.target.value === "" ? 0 : Number(e.target.value))}
                       min={0}
                       max={100000}
                     />
@@ -679,85 +681,45 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
   };
 
   return (
-    <div className="w-full px-4 md:px-6 pb-20">
-      <StepIndicator currentStep={currentStep} totalSteps={5} />
+    <div className="relative">
+      <StepIndicator currentStep={currentStep} />
       
-      <div className="grid grid-cols-1 md:grid-cols-7 gap-4 md:gap-16">
-        <div className="md:col-span-4 relative">
-          <div className="mb-6">
-            <h2 className="text-xl md:text-2xl text-[#252932] font-normal">
-              {t(`application.steps.${currentStep}.title`)}
-            </h2>
+      <div className="relative">
+        {/* Help Image */}
+        <div className="hidden md:block absolute right-[-400px] top-1/2 transform -translate-y-1/2">
+          <div className="relative w-[350px] h-[350px]">
+            <OptimizeHelpImage />
           </div>
+        </div>
 
-          <Form {...form}>
-            <form onSubmit={handleSubmit}>
-              {renderStepContent()}
-              
-              <div className="flex justify-between mt-8 pt-4 border-t">
-                {currentStep > 1 && (
-                  <Button
-                    type="button"
-                    variant="outline"
-                    onClick={onStepBack}
-                    className="border-[#252932] text-[#252932] hover:bg-[#252932]/10"
-                  >
-                    {t("application.button.back")}
-                  </Button>
-                )}
-                <Button 
-                  type="submit"
-                  className="ml-auto bg-[#252932] hover:bg-[#252932]/90 text-white"
+        {/* Existing Form Content */}
+        <Form {...form}>
+          <form onSubmit={handleSubmit} className="space-y-8">
+            {renderStepContent()}
+            
+            <div className="flex justify-between mt-8 pt-4 border-t">
+              {currentStep > 1 && (
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={onStepBack}
+                  className="border-[#252932] text-[#252932] hover:bg-[#252932]/10"
                 >
-                  {currentStep === 5 
-                    ? t("application.button.submit") 
-                    : t("application.button.continue")
-                  }
+                  {t("application.button.back")}
                 </Button>
-              </div>
-            </form>
-          </Form>
-
-          <div className="hidden md:block absolute top-0 -right-8 w-[1px] h-96 bg-gray-300" />
-        </div>
-        
-        <div className="hidden md:block md:col-span-3">
-          <div className="p-6">
-            <h3 className="text-2xl text-[#252932] mb-8 font-normal">
-              {t("application.title")}
-            </h3>
-            <ul className="space-y-6">
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-3">✓</span>
-                <span className="text-gray-700">{t("application.timeEstimate")}</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-3">✓</span>
-                <span className="text-gray-700">{t("application.documents.preferred")}</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-3">✓</span>
-                <span className="text-gray-700">{t("application.documents.incomplete")}</span>
-              </li>
-            </ul>
-
-            <div className="mt-12 mb-8">
-              <Image
-                src="/images/help.svg"
-                alt={t("application.help.illustration")}
-                width={600}
-                height={240}
-                className="w-full h-auto"
-              />
+              )}
+              <Button 
+                type="submit"
+                className="ml-auto bg-[#252932] hover:bg-[#252932]/90 text-white"
+              >
+                {currentStep === 5 
+                  ? t("application.button.submit") 
+                  : t("application.button.continue")
+                }
+              </Button>
             </div>
-
-            <div className="bg-[#252932] text-white p-6 rounded-lg text-center">
-              <h4 className="text-xl">
-                {t("application.help.title")}
-              </h4>
-            </div>
-          </div>
-        </div>
+          </form>
+        </Form>
       </div>
     </div>
   );

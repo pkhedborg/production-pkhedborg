@@ -5,7 +5,6 @@ import { ContactForm, FormFields, StepData } from "@/components/sections/contact
 import FAQSection from "@/components/sections/faq-section";
 import { useTranslation } from "react-i18next";
 import ApplyImage from "@/components/Images/OptimizeApplyImage";
-import OptimizeHelpImage from "@/components/Images/OptimizeHelpImage";
 
 export default function ApplicationPage() {
   const { t } = useTranslation();
@@ -143,7 +142,7 @@ export default function ApplicationPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section with Optimized Image */}
-      <div className="relative h-[300px] md:h-[400px] bg-[#252932] mt-20">
+      <div className="relative h-[300px] md:h-[400px] bg-[#252932] mt-20  ">
         <div className="absolute inset-0">
           <ApplyImage />
           <div className="absolute inset-0 bg-black/30" />
@@ -163,13 +162,8 @@ export default function ApplicationPage() {
         <SuccessMessage />
       ) : (
         <>
-          {/* Form Section */}
+          {/* Form Section - Adjust padding and width for mobile */}
           <div className="max-w-3xl mx-auto mt-8 md:mt-14 px-4 md:px-0">
-            <div className="hidden md:block absolute right-[-400px] top-1/2 transform -translate-y-1/2">
-              <div className="relative w-[350px] h-[350px]">
-                <OptimizeHelpImage />
-              </div>
-            </div>
             <ContactForm 
               currentStep={currentStep}
               formData={formData}
