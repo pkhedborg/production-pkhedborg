@@ -170,10 +170,6 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
     year: '',
     amount: ''
   });
-  const [files, setFiles] = useState<{ [key: string]: File[] }>({
-    cv: [],
-    additional: [],
-  });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -543,7 +539,7 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
                 onChange={(e) => {
                   const file = e.target.files?.[0];
                   if (file) {
-                    setFiles({ ...files, cv: [file] });
+                    setAttachments([{ type: 'cv', file }]);
                   }
                 }}
               />
@@ -561,7 +557,10 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
                 className="mt-2"
                 onChange={(e) => {
                   const files = Array.from(e.target.files || []);
-                  setFiles({ ...files, additional: files });
+                  setAttachments(current => [
+                    ...current,
+                    ...files.map(file => ({ type: 'additional', file }))
+                  ]);
                 }}
                 accept=".pdf,.doc,.docx,.txt,.rtf,.odt,.xlsx,.xls,.csv,.ppt,.pptx"
               />
@@ -681,62 +680,83 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
   };
 
   return (
-    <div className="relative">
-      <StepIndicator currentStep={currentStep} />
+    <div className="w-full px-4 md:px-6 pb-20">
+      <StepIndicator currentStep={currentStep} totalSteps={5} />
       
-      <div className="relative">
-        <div className="hidden md:block absolute right-[-400px] top-1/2 transform -translate-y-1/2">
-          <div className="relative w-[350px] h-[350px]">
-            <OptimizeHelpImage />
+      <div className="grid grid-cols-1 md:grid-cols-7 gap-4 md:gap-16">
+        <div className="md:col-span-4 relative">
+          <div className="mb-6">
+            <h2 className="text-xl md:text-2xl text-[#252932] font-normal">
+              {t(`application.steps.${currentStep}.title`)}
+            </h2>
+          </div>
+
+          <Form {...form}>
+            <form onSubmit={handleSubmit}>
+              {renderStepContent()}
+              
+              <div className="flex justify-between mt-8 pt-4 border-t">
+                {currentStep > 1 && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={onStepBack}
+                    className="border-[#252932] text-[#252932] hover:bg-[#252932]/10"
+                  >
+                    {t("application.button.back")}
+                  </Button>
+                )}
+                <Button 
+                  type="submit"
+                  className="ml-auto bg-[#252932] hover:bg-[#252932]/90 text-white"
+                >
+                  {currentStep === 5 
+                    ? t("application.button.submit") 
+                    : t("application.button.continue")
+                  }
+                </Button>
+              </div>
+            </form>
+          </Form>
+
+          <div className="hidden md:block absolute top-0 -right-8 w-[1px] h-96 bg-gray-300" />
+        </div>
+        
+        <div className="hidden md:block md:col-span-3">
+          <div className="p-6">
+            <h3 className="text-2xl text-[#252932] mb-8 font-normal">
+              {t("application.title")}
+            </h3>
+            <ul className="space-y-6">
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-3">✓</span>
+                <span className="text-gray-700">{t("application.timeEstimate")}</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-3">✓</span>
+                <span className="text-gray-700">{t("application.documents.preferred")}</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-3">✓</span>
+                <span className="text-gray-700">{t("application.documents.incomplete")}</span>
+              </li>
+            </ul>
+
+            <div className="mt-12 mb-8">
+              <div className="hidden md:block absolute right-[-400px] top-1/2 transform -translate-y-1/2">
+                <div className="relative w-[350px] h-[350px]">
+                  <OptimizeHelpImage />
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-[#252932] text-white p-6 rounded-lg text-center">
+              <h4 className="text-xl">
+                {t("application.help.title")}
+              </h4>
+            </div>
           </div>
         </div>
-
-        <Form {...form}>
-          <form onSubmit={handleSubmit} className="space-y-8">
-            {renderStepContent()}
-            <div className="flex justify-between mt-8">
-              {currentStep > 1 && (
-                <Button
-                  type="button"
-                  onClick={onStepBack}
-                  variant="outline"
-                >
-                  {t("contactForm.button.back")}
-                </Button>
-              )}
-              <Button
-                type="submit"
-                className={currentStep === 1 ? "ml-auto" : ""}
-              >
-                {currentStep === 5
-                  ? t("contactForm.button.submit")
-                  : t("contactForm.button.continue")}
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </div>
-
-      <div className="mt-12">
-        <h3 className="text-xl font-semibold mb-4">{t("contactForm.whatHappensNext")}</h3>
-        <ul className="space-y-3 text-gray-600">
-          <li className="flex items-start">
-            <span className="mr-2">•</span>
-            {t("contactForm.nextSteps.review")}
-          </li>
-          <li className="flex items-start">
-            <span className="mr-2">•</span>
-            {t("contactForm.nextSteps.confirmation")}
-          </li>
-          <li className="flex items-start">
-            <span className="mr-2">•</span>
-            {t("contactForm.nextSteps.process")}
-          </li>
-          <li className="flex items-start">
-            <span className="mr-2">•</span>
-            {t("contactForm.nextSteps.contact")}
-          </li>
-        </ul>
       </div>
     </div>
   );
