@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -333,8 +334,7 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
                       type="number"
                       placeholder={t("contactForm.amountPlaceholder")}
                       {...field}
-                      value={field.value === 0 ? "" : field.value}
-                      onChange={(e) => field.onChange(e.target.value === "" ? 0 : Number(e.target.value))}
+                      onChange={(e) => field.onChange(Number(e.target.value))}
                       min={0}
                       max={100000}
                     />
@@ -681,44 +681,81 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
 
   return (
     <div className="relative">
-      <StepIndicator currentStep={currentStep} />
-      
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-2">{t("contactForm.formTitle")}</h2>
+        <p className="text-gray-600">{t("contactForm.intro1")}</p>
+      </div>
+
       <div className="relative">
-        {/* Help Image */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-semibold">
+              {t(`application.steps.${currentStep}.title`)}
+            </h3>
+            <div className="text-sm text-gray-500">
+              {t("application.stepIndicator.step")} {currentStep} of 5
+            </div>
+          </div>
+          <div className="h-2 bg-gray-200 rounded-full">
+            <div
+              className="h-full bg-blue-600 rounded-full transition-all duration-300"
+              style={{ width: `${(currentStep / 5) * 100}%` }}
+            />
+          </div>
+        </div>
+
         <div className="hidden md:block absolute right-[-400px] top-1/2 transform -translate-y-1/2">
           <div className="relative w-[350px] h-[350px]">
             <OptimizeHelpImage />
           </div>
         </div>
 
-        {/* Existing Form Content */}
         <Form {...form}>
           <form onSubmit={handleSubmit} className="space-y-8">
             {renderStepContent()}
-            
-            <div className="flex justify-between mt-8 pt-4 border-t">
+            <div className="flex justify-between mt-8">
               {currentStep > 1 && (
                 <Button
                   type="button"
-                  variant="outline"
                   onClick={onStepBack}
-                  className="border-[#252932] text-[#252932] hover:bg-[#252932]/10"
+                  variant="outline"
                 >
-                  {t("application.button.back")}
+                  {t("contactForm.button.back")}
                 </Button>
               )}
-              <Button 
+              <Button
                 type="submit"
-                className="ml-auto bg-[#252932] hover:bg-[#252932]/90 text-white"
+                className={currentStep === 1 ? "ml-auto" : ""}
               >
-                {currentStep === 5 
-                  ? t("application.button.submit") 
-                  : t("application.button.continue")
-                }
+                {currentStep === 5
+                  ? t("contactForm.button.submit")
+                  : t("contactForm.button.continue")}
               </Button>
             </div>
           </form>
         </Form>
+      </div>
+
+      <div className="mt-12">
+        <h3 className="text-xl font-semibold mb-4">{t("contactForm.whatHappensNext")}</h3>
+        <ul className="space-y-3 text-gray-600">
+          <li className="flex items-start">
+            <span className="mr-2">•</span>
+            {t("contactForm.nextSteps.review")}
+          </li>
+          <li className="flex items-start">
+            <span className="mr-2">•</span>
+            {t("contactForm.nextSteps.confirmation")}
+          </li>
+          <li className="flex items-start">
+            <span className="mr-2">•</span>
+            {t("contactForm.nextSteps.process")}
+          </li>
+          <li className="flex items-start">
+            <span className="mr-2">•</span>
+            {t("contactForm.nextSteps.contact")}
+          </li>
+        </ul>
       </div>
     </div>
   );
