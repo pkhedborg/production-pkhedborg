@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import OptimizeHelpImage from "@/components/Images/OptimizeHelpImage";
+import Link from 'next/link';
 
 // Updated schema to include all form fields across steps
 const formSchema = z.object({
@@ -745,15 +745,16 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
             <div className="mt-12 mb-8">
               <div className="hidden md:block absolute right-[-400px] top-1/2 transform -translate-y-1/2">
                 <div className="relative w-[350px] h-[350px]">
-                  <OptimizeHelpImage />
                 </div>
               </div>
             </div>
 
-            <div className="bg-[#252932] text-white p-6 rounded-lg text-center">
-              <h4 className="text-xl">
-                {t("application.help.title")}
-              </h4>
+            <div className="bg-[#252932] text-white p-6 rounded-lg text-center cursor-pointer hover:bg-[#2f3542] transition-colors">
+              <Link href="/contact" className="block">
+                <h4 className="text-xl">
+                  {t("application.help.title")}
+                </h4>
+              </Link>
             </div>
           </div>
         </div>
