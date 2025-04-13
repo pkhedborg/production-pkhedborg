@@ -72,7 +72,7 @@ const FoundationSection = () => {
               className="text-5xl xl:text-6xl font-bold"
             />
             <p className="text-xl text-gray-600 mt-4">
-              {t('foundation.stats.projects')}
+              {t('history.projectsSponsored')}
             </p>
           </div>
           <div>
@@ -83,7 +83,7 @@ const FoundationSection = () => {
               className="text-5xl xl:text-6xl font-bold"
             />
             <p className="text-xl text-gray-600 mt-4">
-              {t('foundation.stats.grants')}
+              {t('history.grantsDistributed')}
             </p>
           </div>
           <div>
@@ -92,7 +92,7 @@ const FoundationSection = () => {
               className="text-5xl xl:text-6xl font-bold"
             />
             <p className="text-xl text-gray-600 mt-4">
-              {t('foundation.stats.years')}
+              {t('history.yearsOfSupport')}
             </p>
           </div>
         </div>

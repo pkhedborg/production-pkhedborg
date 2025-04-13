@@ -21,8 +21,8 @@ const History = () => {
     { image: "thomas", name: "thomas" },
     { image: "eva", name: "eva" },
     { image: "lars-owe", name: "larsOwe" },
-    { image: "niclas", name: "niclas" },
-    { image: "oliver", name: "oliver" }
+    { image: "oliver", name: "oliver" },
+    { image: "niclas", name: "niclas" }
   ];
 
   return (
