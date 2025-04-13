@@ -24,32 +24,34 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project, priority = false }: ProjectCardProps) => {
   return (
-    <div className="bg-zinc-900 rounded-lg overflow-hidden h-full w-full flex flex-col">
-      <div className="w-full h-[200px] sm:h-[250px] md:h-[200px] relative">
-        <Image
-          src={urlFor(project.mainImage.image).url()}
-          alt={project.headline}
-          fill
-          className="object-cover"
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-          priority={priority}
-        />
+    <Link 
+      href={`/article/${project._id}`}
+      className="block h-full w-full group"
+    >
+      <div className="bg-zinc-900 rounded-lg overflow-hidden h-full w-full flex flex-col transition-transform duration-300 group-hover:scale-[1.02]">
+        <div className="w-full h-[200px] sm:h-[250px] md:h-[200px] relative">
+          <Image
+            src={urlFor(project.mainImage.image).url()}
+            alt={project.headline}
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+            priority={priority}
+          />
+        </div>
+        <div className="p-4 sm:p-5 md:p-6 flex flex-col flex-grow">
+          <h3 className="text-xs sm:text-sm font-semibold mb-2 text-white line-clamp-2 min-h-[3rem]">
+            {project.headline}
+          </h3>
+          <p className="text-gray-400 mb-4 text-xs line-clamp-3 flex-grow">
+            {project.excerpt}
+          </p>
+          <span className="text-red-500 group-hover:text-red-400 inline-flex items-center text-xs sm:text-sm mt-auto transition-colors">
+            Read More
+          </span>
+        </div>
       </div>
-      <div className="p-4 sm:p-5 md:p-6 flex flex-col flex-grow">
-        <h3 className="text-sm sm:text-base font-semibold mb-2 text-white line-clamp-2 min-h-[4rem]">
-          {project.headline}
-        </h3>
-        <p className="text-gray-400 mb-4 text-xs sm:text-sm line-clamp-2 flex-grow">
-          {project.excerpt}
-        </p>
-        <Link 
-          href={`/article/${project._id}`}
-          className="text-red-500 hover:text-red-400 inline-flex items-center text-sm sm:text-base mt-auto"
-        >
-          Read More
-        </Link>
-      </div>
-    </div>
+    </Link>
   );
 };
 
