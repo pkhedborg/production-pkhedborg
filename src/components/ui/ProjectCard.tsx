@@ -40,7 +40,7 @@ const ProjectCard = ({ project, priority = false }: ProjectCardProps) => {
           />
         </div>
         <div className="p-4 sm:p-5 md:p-6 flex flex-col flex-grow">
-          <h3 className="text-xs sm:text-sm font-semibold mb-2 text-white line-clamp-2 min-h-[3rem]">
+          <h3 className="text-sm sm:text-base font-semibold mb-2 text-white line-clamp-3 min-h-[4.5rem]">
             {project.headline}
           </h3>
           <p className="text-gray-400 mb-4 text-xs line-clamp-3 flex-grow">
