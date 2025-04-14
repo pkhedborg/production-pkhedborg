@@ -107,58 +107,12 @@ const ArticleSection = () => {
     fullArticle: article
   });
 
-  // Update the PortableText components to handle both types
+  // Simplified PortableText components - no media content in between paragraphs
   const components: PortableTextComponents = {
     block: {
-      normal: ({children}: PortableTextProps) => {
-        const textContent = children?.toString() || '';
-        const isBreakPoint = textContent.endsWith('.');
-        return (
-          <>
-            <p className="mb-6">{children}</p>
-            {isBreakPoint && article?.mediaContent && (
-              <>
-                {/* Only show YouTube videos in content */}
-                {article.mediaContent.type === 'youtube' && article.mediaContent.youtubeUrl && (
-                  <div className="my-12">
-                    <iframe
-                      width="100%"
-                      height="400"
-                      src={`https://www.youtube.com/embed/${article.mediaContent.youtubeUrl.split('v=')[1]}`}
-                      title="YouTube video player"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-                )}
-                
-                {/* Only show image if it's different from the hero image */}
-                {article.mediaContent.type === 'image' && 
-                  article.mediaContent.image?.asset?.url && 
-                  article.mediaContent.image.asset.url !== article.mainImage?.image.asset.url && (
-                  <figure className="my-12">
-                    <div className="relative w-full aspect-[16/9]">
-                      <Image
-                        src={article.mediaContent.image.asset.url}
-                        alt="Article media"
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 800px"
-                      />
-                    </div>
-                    {article.mediaContent.image.source && (
-                      <figcaption className="text-sm text-gray-600 mt-2 text-center">
-                        Source: {article.mediaContent.image.source.name}
-                      </figcaption>
-                    )}
-                  </figure>
-                )}
-              </>
-            )}
-          </>
-        );
-      }
+      normal: ({children}: PortableTextProps) => (
+        <p className="mb-6">{children}</p>
+      )
     }
   };
 
@@ -300,6 +254,44 @@ const ArticleSection = () => {
                     value={article.mainContent} 
                     components={components}
                   />
+                )}
+
+                {/* Media Content - Shown once at the end */}
+                {article?.mediaContent && (
+                  <div className="my-12">
+                    {article.mediaContent.type === 'youtube' && article.mediaContent.youtubeUrl && (
+                      <iframe
+                        width="100%"
+                        height="400"
+                        src={`https://www.youtube.com/embed/${article.mediaContent.youtubeUrl.split('v=')[1]}`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    )}
+                    
+                    {article.mediaContent.type === 'image' && 
+                      article.mediaContent.image?.asset?.url && 
+                      article.mediaContent.image.asset.url !== article.mainImage?.image.asset.url && (
+                      <figure>
+                        <div className="relative w-full aspect-[16/9]">
+                          <Image
+                            src={article.mediaContent.image.asset.url}
+                            alt="Article media"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 800px"
+                          />
+                        </div>
+                        {article.mediaContent.image.source && (
+                          <figcaption className="text-sm text-gray-600 mt-2 text-center">
+                            Source: {article.mediaContent.image.source.name}
+                          </figcaption>
+                        )}
+                      </figure>
+                    )}
+                  </div>
                 )}
               </div>
             </div>
