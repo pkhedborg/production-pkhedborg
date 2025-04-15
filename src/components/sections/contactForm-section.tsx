@@ -331,12 +331,12 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder={t("contactForm.amountPlaceholder")}
+                      placeholder="(€)"
                       {...field}
                       value={field.value === 0 ? "" : field.value}
                       onChange={(e) => field.onChange(e.target.value === "" ? 0 : Number(e.target.value))}
                       min={0}
-                      max={100000}
+                      max={200000}
                     />
                   </FormControl>
                   <FormMessage />
@@ -372,7 +372,7 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
                         onChange={(e) => setCurrentGrant({...currentGrant, year: e.target.value})}
                       />
                       <Input
-                        placeholder="Amount (€)"
+                        placeholder="(€)"
                         type="number"
                         value={currentGrant.amount}
                         onChange={(e) => setCurrentGrant({...currentGrant, amount: e.target.value})}

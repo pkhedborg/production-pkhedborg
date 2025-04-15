@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, LazyMotion, domAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
+import { useTranslation } from "react-i18next";
 
 // Dynamically import sections with loading boundary
 const FoundationSection = dynamic(() => import('@/components/sections/foundation-section'), {
@@ -68,6 +69,7 @@ const BackgroundVideo = ({ isLoaded, onLoaded }: { isLoaded: boolean; onLoaded: 
 const HeroSection = () => {
   const isMobile = useIsMobile();
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const { t } = useTranslation();
 
   // Simplified animations for mobile
   const mobileVariants = {
@@ -140,7 +142,7 @@ const HeroSection = () => {
                       bg-[#252932] px-4 sm:px-6 py-2 sm:py-3 shadow-xl hover:bg-[#212632]/90 transition-all 
                       duration-300 hover:translate-x-2 hover:shadow-2xl"
                   >
-                    Apply now - application closing 1 May →
+                    {t("home.applicationClosing")}
                   </Link>
                 </motion.div>
               </div>

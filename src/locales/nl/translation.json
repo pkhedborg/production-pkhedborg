@@ -154,7 +154,7 @@
           "subtitle": "Door gedeelde kennis, cultuur en innovatie",
           "learnMore": "Meer informatie"
         },
-        "applicationClosing": "Schrijf nu in - aanmeldingen sluiten op 1 mei →"
+        "applicationClosing": "Schrijf nu in - aanmelding sluit 1 mei →"
       },
 
       "navigation": {
@@ -221,8 +221,7 @@
           "Arts": "Kunst",
           "Science": "Wetenschap",
           "Other": "Anders"
-        },
-        "addPreviousGrant": "Vorige subsidie toevoegen"
+        }
       },
 
       "faq": {
