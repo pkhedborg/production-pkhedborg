@@ -53,7 +53,17 @@
         "step4": "Step 4",
         "step5": "Step 5"
       },
-      "title": "Application"
+      "title": "Application",
+      "success": {
+        "title": "Application Submitted!",
+        "message": "Thank you for your application to the Hedborg Foundation.",
+        "nextSteps": {
+          "title": "Next Steps:",
+          "confirmation": "You will receive a confirmation email within 24 hours",
+          "review": "Our team will review your application (2-3 weeks)",
+          "contact": "We will contact you if we need additional information"
+        }
+      }
     },
 
     "impact": {
@@ -229,7 +239,8 @@
           "process": "Applications are reviewed on a rolling basis and decisions are finalized at our next board meeting",
           "contact": "We'll contact you if we need additional information"
         },
-        "submit": "Submit Application"
+        "submit": "Submit Application",
+        "addPreviousGrant": "Add previous grant"
       },
 
       "faq": {

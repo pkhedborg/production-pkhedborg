@@ -221,7 +221,8 @@
           "Arts": "Kunst",
           "Science": "Wetenschap",
           "Other": "Anders"
-        }
+        },
+        "addPreviousGrant": "Vorige subsidie toevoegen"
       },
 
       "faq": {
