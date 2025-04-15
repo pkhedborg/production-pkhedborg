@@ -51,8 +51,8 @@ const History = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { value: 250, text: "history.projectsSponsored", prefix: "+" },
-              { value: 500000, text: "history.grantsDistributed", decimal: 2 },
+              { value: 500, text: "history.projectsSponsored", prefix: "+" },
+              { value: 750000, text: "history.grantsDistributed", decimal: 2 },
               { value: 41, text: "history.yearsOfSupport" }
             ].map((stat, index) => (
               <div
