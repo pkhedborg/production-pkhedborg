@@ -78,9 +78,8 @@ const FoundationSection = () => {
           </div>
           <div>
             <NumberTicker 
-              value={5000000}
+              value={500000}
               decimalPlaces={2}
-              prefix="SEK"
               className="text-5xl xl:text-6xl font-bold"
             />
             <p className="text-xl text-gray-600 mt-4">
