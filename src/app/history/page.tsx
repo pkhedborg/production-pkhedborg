@@ -60,7 +60,7 @@ const History = () => {
                 className="transition-transform duration-200 hover:-translate-y-1"
               >
                 <h3 className="text-5xl font-bold text-red-600">
-                  <NumberTicker value={stat.value} decimalPlaces={stat.decimal} />
+                  <NumberTicker value={stat.value} decimalPlaces={stat.decimal} prefix={stat.prefix} />
                 </h3>
                 <p className="text-lg">{t(stat.text)}</p>
               </div>
