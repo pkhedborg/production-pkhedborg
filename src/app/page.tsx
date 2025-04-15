@@ -123,13 +123,7 @@ const HeroSection = () => {
                     className="block font-light hover:translate-x-4 transition-transform duration-700"
                     variants={isMobile ? mobileVariants : fadeInUp}
                   >
-                    Belgium
-                  </motion.span>
-                  <motion.span 
-                    className="block font-light hover:translate-x-6 transition-transform duration-700"
-                    variants={isMobile ? mobileVariants : fadeInUp}
-                  >
-                    & Sweden
+                    Belgium & Sweden
                   </motion.span>
                 </h1>
                 
