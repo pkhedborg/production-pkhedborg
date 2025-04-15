@@ -68,8 +68,9 @@ const FoundationSection = () => {
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 text-center">
           <div>
             <NumberTicker 
-              value={500} 
+              value={250} 
               className="text-5xl xl:text-6xl font-bold"
+              prefix="+"
             />
             <p className="text-xl text-gray-600 mt-4">
               {t('history.projectsSponsored')}
@@ -77,9 +78,9 @@ const FoundationSection = () => {
           </div>
           <div>
             <NumberTicker 
-              value={1499999.90}
+              value={5000000}
               decimalPlaces={2}
-              prefix=""
+              prefix="SEK"
               className="text-5xl xl:text-6xl font-bold"
             />
             <p className="text-xl text-gray-600 mt-4">
@@ -88,7 +89,7 @@ const FoundationSection = () => {
           </div>
           <div>
             <NumberTicker 
-              value={40}
+              value={41}
               className="text-5xl xl:text-6xl font-bold"
             />
             <p className="text-xl text-gray-600 mt-4">
