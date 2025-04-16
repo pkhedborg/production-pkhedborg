@@ -44,8 +44,8 @@ export function NavigationMenu({ menuItems }: NavigationMenuProps) {
           <Link href="/" className="flex items-center cursor-pointer">
             <div className="relative h-[72px] w-[200px]">
               <Image
-                src="/images/logo-black.svg"
-                alt="Logo"
+                src="/PKhedborg-logo.svg"
+                alt="PK Hedborg Foundation Logo"
                 fill
                 className="object-contain"
                 priority

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1478.72 363.13">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 268.9px;
+        letter-spacing: .11em;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-family: Perpetua, Perpetua;
+      }
+
+      .cls-4 {
+        font-size: 313.72px;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        font-family: Perpetua-Bold, Perpetua;
+        font-weight: 700;
+      }
+
+      .cls-5 {
+        font-size: 192.22px;
+      }
+
+      .cls-5, .cls-2, .cls-7, .cls-6, .cls-3 {
+        fill: #2a3689;
+      }
+
+      .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-8, .cls-9, .cls-10, .cls-11, .cls-12 {
+        fill-rule: evenodd;
+      }
+
+      .cls-13 {
+        fill: #d3ae34;
+      }
+
+      .cls-2 {
+        font-size: 146.6px;
+        letter-spacing: .17em;
+      }
+
+      .cls-9 {
+        fill: #3969b2;
+      }
+
+      .cls-6 {
+        font-size: 158.82px;
+      }
+
+      .cls-10 {
+        fill: #f8ec23;
+      }
+
+      .cls-3 {
+        font-size: 164.76px;
+        letter-spacing: .11em;
+      }
+
+      .cls-11 {
+        fill: #d02028;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.5, SVG Export Plug-In . SVG Version: 1.2.0 Build 176)  -->
+  <g>
+    <g id="Layer_1">
+      <rect x="299.5" y="-755.8" width="4.41" height="454.38"/>
+      <path class="cls-9" d="M210.31-729.48c-62,90.39-60.59,183.74-30.7,278.53-82.76-85.69-103.52-255.12,30.7-278.53h0Z"/>
+      <path class="cls-10" d="M110.95-665.1c-149.69,106.85,11.49,260.62,117.22,322.81-64.88-97.5-163.59-198.02-117.22-322.81h0Z"/>
+      <path class="cls-11" d="M201.91-340.87c-79.27-49.61-149.56-109.21-175.95-217.98-62.87,147.59,60.68,191.08,175.95,217.98h0Z"/>
+      <path class="cls-12" d="M176.56-323.65c-79.53-17.49-144.79-49.29-181.56-109,5.38,125.6,76.49,124.07,181.56,109h0Z"/>
+      <text class="cls-4" transform="translate(379.98 -543.27)"><tspan x="0" y="0">PKHEDBORG</tspan></text>
+      <text class="cls-1" transform="translate(380.97 -317.94)"><tspan x="0" y="0">FOUNDATION</tspan></text>
+      <path class="cls-9" d="M1954.91-6.48c-82.14,119.75-80.27,243.41-40.67,368.99-109.64-113.52-137.14-337.98,40.67-368.99h0Z"/>
+      <path class="cls-10" d="M1823.28,78.81c-198.31,141.55,15.22,345.27,155.3,427.66-85.95-129.17-216.73-262.34-155.3-427.66h0Z"/>
+      <path class="cls-11" d="M1943.78,508.35c-105.02-65.72-198.13-144.68-233.1-288.78-83.29,195.52,80.38,253.14,233.1,288.78h0Z"/>
+      <path class="cls-12" d="M1910.2,531.16c-105.36-23.16-191.81-65.31-240.53-144.4,7.13,166.39,101.34,164.36,240.53,144.4h0Z"/>
+      <path class="cls-7" d="M2642.72,389.83"/>
+      <text class="cls-6" transform="translate(1997.92 266.99)"><tspan x="0" y="0">P&amp;K HEDBORG</tspan></text>
+      <text class="cls-2" transform="translate(1998.46 389.84)"><tspan x="0" y="0">FOUNDATION</tspan></text>
+      <rect class="cls-13" x="17.01" y="43.25" width="280.64" height="280.64"/>
+      <g>
+        <path class="cls-8" d="M213.06,60.57c-35,51.03-34.21,103.73-17.33,157.25-46.72-48.38-58.44-144.03,17.33-157.25h0Z"/>
+        <path class="cls-8" d="M156.97,96.91c-84.51,60.32,6.49,147.14,66.18,182.25-36.63-55.05-92.36-111.8-66.18-182.25h0Z"/>
+        <path class="cls-8" d="M208.32,279.97c-44.75-28.01-84.44-61.65-99.34-123.06-35.49,83.32,34.26,107.88,99.34,123.06h0Z"/>
+        <path class="cls-8" d="M194.01,289.69c-44.9-9.87-81.74-27.83-102.5-61.54,3.04,70.91,43.19,70.04,102.5,61.54h0Z"/>
+      </g>
+      <text class="cls-5" transform="translate(332.58 170.58)"><tspan x="0" y="0">PKHEDBORG</tspan></text>
+      <text class="cls-3" transform="translate(333.18 308.65)"><tspan x="0" y="0">FOUNDATION</tspan></text>
+    </g>
+  </g>
+</svg>
