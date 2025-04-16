@@ -42,12 +42,11 @@ export function NavigationMenu({ menuItems }: NavigationMenuProps) {
         <div className="flex justify-between items-center py-3 max-w-[1400px] mx-auto">
           {/* Logo */}
           <Link href="/" className="flex items-center cursor-pointer">
-            <div className="relative h-[45px] w-[220px]">
+            <div className="relative h-[60px] w-[220px]">
               <Image
                 src="/PKhedborg-logo.svg"
                 alt="PK Hedborg Foundation Logo"
                 fill
-                className="object-contain object-left"
                 priority
               />
             </div>
