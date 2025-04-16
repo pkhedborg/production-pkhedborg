@@ -37,17 +37,17 @@ export function NavigationMenu({ menuItems }: NavigationMenuProps) {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-background">
-      {/* Main navigation container */}
-      <div className="mx-auto px-4 sm:px-44">
-        <div className="flex justify-between items-center py-4">
+      {/* Main navigation container - adjusted padding */}
+      <div className="mx-auto px-4 md:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-3 max-w-[1400px] mx-auto">
           {/* Logo */}
           <Link href="/" className="flex items-center cursor-pointer">
-            <div className="relative h-[72px] w-[200px]">
+            <div className="relative h-[45px] w-[220px]">
               <Image
                 src="/PKhedborg-logo.svg"
                 alt="PK Hedborg Foundation Logo"
                 fill
-                className="object-contain"
+                className="object-contain object-left"
                 priority
               />
             </div>
