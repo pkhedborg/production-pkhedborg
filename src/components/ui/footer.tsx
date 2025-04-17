@@ -55,10 +55,10 @@ const Footer = () => {
         <div className="flex flex-col items-center max-w-md">
           <div className="h-20 relative w-auto mb-6">
             <Image
-              src="/PKhedborg-logo.svg"
+              src="/logo/Logo-footer.svg"
               alt="Foundation logo"
-              width={80}
-              height={80}
+              width={40}
+              height={40}
               priority
             />
           </div>
