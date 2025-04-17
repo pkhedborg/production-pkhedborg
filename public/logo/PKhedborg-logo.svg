@@ -9,8 +9,12 @@
         letter-spacing: .11em;
       }
 
-      .st0, .st1, .st2 {
+      .st0, .st1 {
         fill: #2a3689;
+      }
+
+      .st2 {
+        fill: #252932;
       }
 
       .st3 {
