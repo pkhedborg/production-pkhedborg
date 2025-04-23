@@ -7,6 +7,7 @@ import I18nProvider from '../components/providers/I18nProvider';
 import { NavigationMenu } from "@/components/ui/navigation-menu";
 import ClientFooter from "@/components/ui/ClientFooter";
 import { useTranslation } from "react-i18next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // Custom fonts setup
 const jakarta = Plus_Jakarta_Sans({
@@ -60,6 +61,7 @@ export default function RootLayout({
             </footer>
           </div>
         </I18nProvider>
+        <SpeedInsights/>
       </body>
     </html>
   );
