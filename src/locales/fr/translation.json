@@ -221,7 +221,14 @@
           "Science": "Science",
           "Other": "Autre"
         },
-        "previousGrantsHelper": "Veuillez inclure toute précédente demande à notre fondation ainsi que d'autres fondations"
+        "previousGrantsHelper": "Veuillez inclure toute précédente demande à notre fondation ainsi que d'autres fondations",
+        "whatHappensNext": "Que se passe-t-il ensuite ?",
+        "nextSteps": {
+          "review": "Votre candidature sera examinée par notre équipe",
+          "confirmation": "Vous recevrez un e-mail de confirmation dans les 24 heures",
+          "process": "Les candidatures sont examinées en continu et les décisions sont finalisées lors de notre prochaine réunion du conseil",
+          "contact": "Nous vous contacterons si nous avons besoin d'informations supplémentaires"
+        }
       },
 
       "faq": {

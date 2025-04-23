@@ -221,6 +221,13 @@
           "Arts": "Kunst",
           "Science": "Wetenschap",
           "Other": "Anders"
+        },
+        "whatHappensNext": "Wat gebeurt er nu?",
+        "nextSteps": {
+          "review": "Uw aanvraag wordt beoordeeld door ons team",
+          "confirmation": "U ontvangt binnen 24 uur een bevestigingsmail",
+          "process": "Aanvragen worden doorlopend beoordeeld en beslissingen worden genomen tijdens onze volgende bestuursvergadering",
+          "contact": "We nemen contact met u op als we aanvullende informatie nodig hebben"
         }
       },
 

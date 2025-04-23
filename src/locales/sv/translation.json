@@ -222,6 +222,13 @@
           "Arts": "Konst",
           "Science": "Vetenskap",
           "Other": "Annat"
+        },
+        "whatHappensNext": "Vad händer härnäst?",
+        "nextSteps": {
+          "review": "Din ansökan kommer att granskas av vårt team",
+          "confirmation": "Du kommer att få ett bekräftelsemail inom 24 timmar",
+          "process": "Ansökningar granskas löpande och beslut fattas vid nästa styrelsemöte",
+          "contact": "Vi kontaktar dig om vi behöver ytterligare information"
         }
       },
 
