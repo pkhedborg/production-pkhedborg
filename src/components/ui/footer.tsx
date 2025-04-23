@@ -90,7 +90,7 @@ const Footer = () => {
               src: "/icons/Icon/youtube.svg",
             },
             {
-              href: "https://linkedin.com",
+              href: "https://www.linkedin.com/company/petra-och-karl-erik-hedborgs-stiftelse/",
               alt: "LinkedIn",
               animation: linkedinAnimation,
               setAnimation: setLinkedinAnimation,
