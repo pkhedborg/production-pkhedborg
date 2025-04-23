@@ -81,7 +81,7 @@ const Footer = () => {
               src: "/icons/Icon/facebook.svg",
             },
             {
-              href: "https://youtube.com",
+              href: "http://youtube.com/@pkhedborg",
               alt: "YouTube",
               animation: youtubeAnimation,
               setAnimation: setYoutubeAnimation,
@@ -99,7 +99,7 @@ const Footer = () => {
               src: "/icons/Icon/linkedin-white.svg",
             },
             {
-              href: "https://twitter.com",
+              href: "https://x.com/PKHedborg",
               alt: "Twitter",
               animation: twitterAnimation,
               setAnimation: setTwitterAnimation,
