@@ -49,8 +49,8 @@ const Footer = () => {
   }, [isHoveredTwitter]);
 
   return (
-    <footer className="bg-[#221e1b] text-white py-16">
-      <div className="container mx-auto flex flex-col items-center space-y-12 px-4">
+    <footer className="bg-[#221e1b] text-white py-16 w-full" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
+      <div className="max-w-7xl mx-auto flex flex-col items-center space-y-12 px-4">
         {/* Logo Section */}
         <div className="flex flex-col items-center max-w-md">
           <div className="h-20 relative w-auto mb-6">

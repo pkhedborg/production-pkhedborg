@@ -54,16 +54,18 @@ const videoVariants = {
 };
 
 const BackgroundVideo = ({ isLoaded, onLoaded }: { isLoaded: boolean; onLoaded: () => void }) => (
-  <video
-    className={`w-full h-[600px] md:h-[800px] object-cover ${!isLoaded ? 'invisible' : ''}`}
-    src="/video/hero.webm"
-    autoPlay
-    loop
-    muted
-    playsInline
-    onLoadedData={onLoaded}
-    style={{ transform: 'translate3d(0, 0, 0)' }}
-  />
+  <div className="absolute left-0 right-0 w-full h-[600px] md:h-[800px]">
+    <video
+      className={`absolute inset-0 w-full h-full object-cover ${!isLoaded ? 'invisible' : ''}`}
+      src="/video/hero.webm"
+      autoPlay
+      loop
+      muted
+      playsInline
+      onLoadedData={onLoaded}
+      style={{ transform: 'translate3d(0, 0, 0)' }}
+    />
+  </div>
 );
 
 const HeroSection = () => {
@@ -83,65 +85,63 @@ const HeroSection = () => {
       className="relative bg-white w-full"
       initial="hidden"
       animate="visible"
+      style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}
     >
-      <div className="mx-auto w-full">
-        <div className="relative w-full h-[600px] md:h-[800px] overflow-hidden">
-          {/* Video Background */}
-          <BackgroundVideo 
-            isLoaded={isVideoLoaded}
-            onLoaded={() => setIsVideoLoaded(true)}
-          />
-          
-          {/* Gradient Overlay */}
+      <div className="relative w-full h-[600px] md:h-[800px] overflow-hidden">
+        <BackgroundVideo 
+          isLoaded={isVideoLoaded}
+          onLoaded={() => setIsVideoLoaded(true)}
+        />
+        
+        {/* Gradient Overlay */}
+        <motion.div 
+          variants={videoVariants}
+          className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"
+          aria-hidden="true"
+        />
+        
+        {/* Hero Content */}
+        <div className="absolute inset-0 flex flex-col justify-center items-center px-4 sm:px-8">
           <motion.div 
-            variants={videoVariants}
-            className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"
-            aria-hidden="true"
-          />
-          
-          {/* Hero Content */}
-          <div className="absolute inset-0 flex flex-col justify-center items-center px-4 sm:px-8">
-            <motion.div 
-              className="relative z-20 max-w-3xl sm:text-center"
-              variants={{
-                hidden: { opacity: 0 },
-                visible: { 
-                  opacity: 1,
-                  transition: { duration: 0.5 }
-                }
-              }}
-            >
-              <div className="space-y-6 sm:space-y-8">
-                <h1 className="text-5xl sm:text-6xl md:text-7xl font-extralight text-white tracking-tight leading-none">
-                  <motion.span 
-                    className="block hover:translate-x-2 transition-transform duration-700"
-                    variants={isMobile ? mobileVariants : fadeInUp}
-                  >
-                    Bridging
-                  </motion.span>
-                  <motion.span 
-                    className="block font-light hover:translate-x-4 transition-transform duration-700"
-                    variants={isMobile ? mobileVariants : fadeInUp}
-                  >
-                    Belgium & Sweden
-                  </motion.span>
-                </h1>
-                
-                <motion.div
+            className="relative z-20 max-w-3xl sm:text-center"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { 
+                opacity: 1,
+                transition: { duration: 0.5 }
+              }
+            }}
+          >
+            <div className="space-y-6 sm:space-y-8">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-extralight text-white tracking-tight leading-none">
+                <motion.span 
+                  className="block hover:translate-x-2 transition-transform duration-700"
                   variants={isMobile ? mobileVariants : fadeInUp}
                 >
-                  <Link 
-                    href="/application"
-                    className="inline-block text-base sm:text-lg md:text-xl text-white font-light tracking-wide 
-                      bg-[#252932] px-4 sm:px-6 py-2 sm:py-3 shadow-xl hover:bg-[#212632]/90 transition-all 
-                      duration-300 hover:translate-x-2 hover:shadow-2xl"
-                  >
-                    {t("home.applicationClosing")}
-                  </Link>
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
+                  Bridging
+                </motion.span>
+                <motion.span 
+                  className="block font-light hover:translate-x-4 transition-transform duration-700"
+                  variants={isMobile ? mobileVariants : fadeInUp}
+                >
+                  Belgium & Sweden
+                </motion.span>
+              </h1>
+              
+              <motion.div
+                variants={isMobile ? mobileVariants : fadeInUp}
+              >
+                <Link 
+                  href="/application"
+                  className="inline-block text-base sm:text-lg md:text-xl text-white font-light tracking-wide 
+                    bg-[#252932] px-4 sm:px-6 py-2 sm:py-3 shadow-xl hover:bg-[#212632]/90 transition-all 
+                    duration-300 hover:translate-x-2 hover:shadow-2xl"
+                >
+                  {t("home.applicationClosing")}
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </motion.section>
