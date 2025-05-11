@@ -63,7 +63,7 @@ const Footer = () => {
             />
           </div>
           <p className="text-center text-base md:text-lg">
-            We are a nonprofit connecting Belgium and Sweden through culture, knowledge, and innovation.
+            We are a nonprofit foundation connecting Belgium and Sweden through culture, knowledge, and innovation.
           </p>
           <div className="w-60 mt-12 h-[2px] bg-gray-500"></div>
         </div>
