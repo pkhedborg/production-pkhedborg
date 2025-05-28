@@ -113,7 +113,7 @@
         "foundationTitle": "La Fondation",
         "foundationText1": "L'objectif de la fondation est de soutenir et de développer les liens entre la Belgique et la Suède en hommage à la mémoire de la Reine Astrid de Belgique. Son activité est basée sur des dons du Consul Général Karl Erik Hedborg.",
         "foundationText2": "La fondation distribue actuellement des subventions deux fois par an. Les subventions peuvent être attribuées par exemple pour soutenir des études académiques supérieures, des échanges de recherche, l'impression et la traduction d'œuvres littéraires ou scientifiques ainsi que pour soutenir des expositions d'art, des concerts et des conférences qui servent à renforcer les liens entre la Suède et la Belgique.",
-        "foundationText3": "Le conseil d'administration décide des demandes de subventions lors de ses deux réunions annuelles en avril et en novembre. Pour être examinées lors de ces réunions, les demandes doivent parvenir au secrétaire de la fondation au plus tard le 15 octobre.",
+        "foundationText3": "Le conseil d'administration décide des demandes de subventions lors de ses deux réunions annuelles en avril et en novembre. Pour être examinées lors de ces réunions, les demandes doivent parvenir au secrétaire de la fondation au plus tard le 15 mars ou le 15 octobre.",
         "karlErikTitle": "Karl-Erik Hedborg (1889 - 1988)",
         "karlErikText1": "Karl-Erik Hedborg (1889 - 1988) a commencé à travailler pour Svenska Tändsticksaktiebolaget (STAB) peu de temps après avoir obtenu son diplôme de Master en ingénierie. En 1920, il a été nommé directeur général de la filiale STAB, Union Allumettière, en Belgique. Il a démissionné en 1956 mais a poursuivi ses activités en faveur de l'entreprise et des relations bilatérales entre la Suède et la Belgique.",
         "karlErikText2": "De 1928 à 1962, il a également été consul général de Suède à Bruxelles et a joué un rôle important, notamment pendant l'occupation allemande de 1940 à 1945. Sa position de diplomate d'un pays neutre lui a permis de contribuer de manière significative à la transition de l'occupation allemande vers l'indépendance de la Belgique.",
@@ -154,7 +154,7 @@
           "subtitle": "Par le partage des connaissances, de la culture et de l'innovation",
           "learnMore": "En savoir plus"
         },
-        "applicationClosing": "Postulez maintenant - clôture des candidatures le 1er mai →"
+        "applicationClosing": "Postulez maintenant - clôture des candidatures le 15 octobre →"
       },
 
       "navigation": {
@@ -258,7 +258,7 @@
         "title": "La Fondation",
         "description1": "L'objectif de la fondation est de soutenir et de développer les liens entre la Belgique et la Suède en hommage à la mémoire de la reine Astrid de Belgique. Son activité est basée sur des dons du consul général Karl Erik Hedborg.",
         "description2": "La fondation distribue des subventions deux fois par an. Les subventions peuvent être attribuées pour des études académiques supérieures, des échanges de recherche, des traductions d'œuvres littéraires ou scientifiques, ou pour soutenir des expositions d'art, des concerts et des conférences.",
-        "description3": "Le conseil d'administration décide des demandes de subvention lors de ses deux réunions annuelles en avril et en novembre. Pour être prises en compte, les demandes doivent parvenir au secrétaire de la fondation avant le 15 octobre.",
+        "description3": "Le conseil d'administration décide des demandes de subvention lors de ses deux réunions annuelles en avril et en novembre. Pour être prises en compte, les demandes doivent parvenir au secrétaire de la fondation avant le 15 mars ou le 15 octobre.",
         "buttonText": "Créer une nouvelle soumission",
         "subtitle": "À propos de nous"
       },

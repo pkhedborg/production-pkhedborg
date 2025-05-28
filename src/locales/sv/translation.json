@@ -114,7 +114,7 @@
         "foundationTitle": "Stiftelsen",
         "foundationText1": "Stiftelsens syfte är att stödja och utveckla banden mellan Belgien och Sverige som en hyllning till minnet av Drottning Astrid av Belgien. Verksamheten baseras på donationer från generalkonsul Karl Erik Hedborg.",
         "foundationText2": "Stiftelsen delar ut bidrag två gånger om året. Bidrag kan beviljas till exempel för akademiska studier, forskningsutbyte, tryckning och översättning av litterära eller vetenskapliga verk samt för konstutställningar, konserter och föreläsningar som stärker banden mellan Sverige och Belgien.",
-        "foundationText3": "Styrelsen beslutar om ansökningar om bidrag vid sina två årliga möten i april och november. Ansökningar måste ha nått stiftelsens sekreterare senast den 15 oktober.",
+        "foundationText3": "Styrelsen beslutar om ansökningar om bidrag vid sina två årliga möten i april och november. Ansökningar måste ha nått stiftelsens sekreterare senast den 15 mars eller den 15 oktober.",
         "karlErikTitle": "Karl-Erik Hedborg (1889 - 1988)",
         "karlErikText1": "Karl-Erik Hedborg (1889 - 1988) började arbeta för Svenska Tändsticksaktiebolaget (STAB) kort efter att ha tagit examen som civilingenjör. 1920 utnämndes han till verkställande direktör för STAB:s dotterbolag Union Allumettière i Belgien. Han avgick 1956 men fortsatte sitt arbete för att stärka relationerna mellan Sverige och Belgien.",
         "karlErikText2": "Mellan 1928 och 1962 var han också Sveriges generalkonsul i Bryssel och spelade en viktig roll, särskilt under den tyska ockupationen 1940 - 1945. Hans position som diplomat i ett neutralt land gjorde det möjligt för honom att bidra väsentligt till övergången från tysk ockupation till belgisk självständighet.",
@@ -155,7 +155,7 @@
           "subtitle": "Genom delad kunskap, kultur och innovation",
           "learnMore": "Läs mer"
         },
-        "applicationClosing": "Ansök nu - ansökan stänger 1 maj →"
+        "applicationClosing": "Ansök nu - ansökan stänger 15 oktober →"
       },
 
       "navigation": {
@@ -259,7 +259,7 @@
         "title": "Stiftelsen",
         "description1": "Syftet med stiftelsen är att stödja och utveckla banden mellan Belgien och Sverige som en hyllning till minnet av drottning Astrid av Belgien. Verksamheten bygger på donationer från generalkonsul Karl Erik Hedborg.",
         "description2": "Stiftelsen delar ut bidrag två gånger per år. Bidrag kan delas ut för högre akademiska studier, forskningsutbyten, översättning av litterära eller vetenskapliga verk eller för att stödja konstutställningar, konserter och föreläsningar.",
-        "description3": "Stiftelsens styrelse fattar beslut om ansökningar vid sina två årliga möten i april och november. För att behandlas måste ansökningar nå stiftelsens sekreterare senast den 15 oktober.",
+        "description3": "Stiftelsens styrelse fattar beslut om ansökningar vid sina två årliga möten i april och november. För att behandlas måste ansökningar nå stiftelsens sekreterare senast den 15 mars eller den 15 oktober.",
         "buttonText": "Skapa en ny ansökan",
         "subtitle": "Om oss"
       },
