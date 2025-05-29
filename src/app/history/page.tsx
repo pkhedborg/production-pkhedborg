@@ -51,7 +51,7 @@ const History = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { value: 950, text: "history.projectsSponsored", prefix: "+" },
-              { value: 1050000000, text: "history.grantsDistributed", decimal: 2 },
+              { value: 1050000000, text: "history.grantsDistributed"},
               { value: 41, text: "history.yearsOfSupport" }
             ].map((stat, index) => (
               <div
@@ -59,7 +59,7 @@ const History = () => {
                 className="transition-transform duration-200 hover:-translate-y-1"
               >
                 <h3 className="text-5xl font-bold text-red-600">
-                  <NumberTicker value={stat.value} decimalPlaces={stat.decimal} prefix={stat.prefix} />
+                  <NumberTicker value={stat.value} prefix={stat.prefix} />
                 </h3>
                 <p className="text-lg">{t(stat.text)}</p>
               </div>
