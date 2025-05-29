@@ -78,7 +78,7 @@ const FoundationSection = () => {
           </div>
           <div>
             <NumberTicker 
-              value={105000000}
+              value={1050000000}
               decimalPlaces={2}
               className="text-5xl xl:text-6xl font-bold"
             />
