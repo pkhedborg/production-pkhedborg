@@ -68,7 +68,7 @@ const FoundationSection = () => {
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 text-center">
           <div>
             <NumberTicker 
-              value={650} 
+              value={950} 
               className="text-5xl xl:text-6xl font-bold"
               prefix="+"
             />
@@ -78,7 +78,7 @@ const FoundationSection = () => {
           </div>
           <div>
             <NumberTicker 
-              value={750000}
+              value={105000000}
               decimalPlaces={2}
               className="text-5xl xl:text-6xl font-bold"
             />

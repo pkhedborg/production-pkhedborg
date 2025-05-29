@@ -33,8 +33,8 @@
       },
       "timeEstimate": "Veuillez prévoir environ quinze minutes pour remplir votre candidature.",
       "documents": {
-        "preferred": "Les documents préférés sont un CV et une proposition budgétaire détaillée.",
-        "incomplete": "Vous pouvez poursuivre votre candidature même si vous n'avez pas tous vos documents disponibles."
+        "preferred": "Un CV et une proposition budgétaire détaillée sont obligatoires.",
+        "incomplete": "La candidature doit être rédigée uniquement en suédois ou en anglais."
       },
       "button": {
         "continue": "Continuer",

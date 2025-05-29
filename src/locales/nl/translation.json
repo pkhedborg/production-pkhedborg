@@ -33,8 +33,8 @@
       },
       "timeEstimate": "Neem ongeveer vijftien minuten de tijd om uw aanvraag in te vullen.",
       "documents": {
-        "preferred": "Voorkeursdocumenten zijn een CV en een gedetailleerd budgetvoorstel.",
-        "incomplete": "U kunt doorgaan met uw aanvraag ook als u niet al uw documenten beschikbaar heeft."
+        "preferred": "Een CV en een gedetailleerd budgetvoorstel zijn verplicht.",
+        "incomplete": "De aanvraag moet uitsluitend in het Zweeds of Engels worden ingediend."
       },
       "button": {
         "continue": "Doorgaan",
