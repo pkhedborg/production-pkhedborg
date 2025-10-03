@@ -123,7 +123,7 @@ export interface FormFields {
 }
 
 export interface StepData {
-  [key: string]: string | File[] | { type: string; file: File }[] | undefined;
+  [key: string]: string | number | File[] | { type: string; file: File }[] | undefined;
 }
 
 interface ContactFormProps {
@@ -170,6 +170,7 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
     year: '',
     amount: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -617,8 +618,13 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Prevent multiple submissions
+    if (isSubmitting) return;
+
     const stepFields = STEP_FIELDS[currentStep];
     if (!stepFields) return;
+
+    setIsSubmitting(true);
 
     try {
       // Special handling for step 3 (previous grants)
@@ -665,17 +671,17 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
       const isValid = await form.trigger(stepFields as Array<keyof typeof formSchema._type>);
       if (!isValid) return;
 
-      const stepData = stepFields.reduce((acc, field) => {
-        const value = form.getValues(field as keyof typeof form.getValues);
-        return {
-          ...acc,
-          [field]: value
-        };
-      }, {} as Record<string, string>);
+      const stepData: StepData = {};
+      stepFields.forEach((field: string) => {
+        const value = form.getValues()[field as keyof typeof formSchema._type];
+        stepData[field] = value;
+      });
 
       onStepComplete(stepData);
     } catch (error) {
       console.error("Error:", error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -701,19 +707,30 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
                     type="button"
                     variant="outline"
                     onClick={onStepBack}
-                    className="border-[#252932] text-[#252932] hover:bg-[#252932]/10"
+                    disabled={isSubmitting}
+                    className="border-[#252932] text-[#252932] hover:bg-[#252932]/10 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {t("application.button.back")}
                   </Button>
                 )}
                 <Button 
                   type="submit"
-                  className="ml-auto bg-[#252932] hover:bg-[#252932]/90 text-white"
+                  disabled={isSubmitting}
+                  className="ml-auto bg-[#252932] hover:bg-[#252932]/90 text-white disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {currentStep === 5 
-                    ? t("application.button.submit") 
-                    : t("application.button.continue")
-                  }
+                  {isSubmitting ? (
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      {currentStep === 5 
+                        ? t("application.button.submitting") 
+                        : t("application.button.processing")
+                      }
+                    </div>
+                  ) : (
+                    currentStep === 5 
+                      ? t("application.button.submit") 
+                      : t("application.button.continue")
+                  )}
                 </Button>
               </div>
             </form>

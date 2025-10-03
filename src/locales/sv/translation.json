@@ -39,7 +39,9 @@
       "button": {
         "continue": "Fortsätt",
         "back": "Tillbaka",
-        "submit": "Skicka ansökan"
+        "submit": "Skicka ansökan",
+        "processing": "Bearbetar...",
+        "submitting": "Skickar..."
       },
       "help": {
         "title": "Behöver du hjälp med din ansökan?",

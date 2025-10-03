@@ -43,7 +43,9 @@
       "button": {
         "continue": "Continue",
         "back": "Back",
-        "submit": "Submit Application"
+        "submit": "Submit Application",
+        "processing": "Processing...",
+        "submitting": "Submitting..."
       },
       "stepIndicator": {
         "step": "Step",

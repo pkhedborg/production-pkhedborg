@@ -39,7 +39,9 @@
       "button": {
         "continue": "Doorgaan",
         "back": "Terug",
-        "submit": "Aanvraag indienen"
+        "submit": "Aanvraag indienen",
+        "processing": "Verwerken...",
+        "submitting": "Indienen..."
       },
       "help": {
         "title": "Hulp nodig bij uw aanvraag?",

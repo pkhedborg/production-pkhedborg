@@ -39,7 +39,9 @@
       "button": {
         "continue": "Continuer",
         "back": "Retour",
-        "submit": "Soumettre la candidature"
+        "submit": "Soumettre la candidature",
+        "processing": "Traitement...",
+        "submitting": "Soumission..."
       },
       "help": {
         "title": "Besoin d'aide pour votre candidature ?",
