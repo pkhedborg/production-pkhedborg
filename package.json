@@ -24,11 +24,11 @@
     "i18next-browser-languagedetector": "^8.0.4",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.483.0",
-    "next": "15.2.3",
-    "next-sanity": "^9.9.5",
+    "next": "^15.5.7",
+    "next-sanity": "^11.6.10",
     "next-themes": "^0.4.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
     "react-i18next": "^15.4.1",
     "tailwind-merge": "^3.0.2",
     "zod": "^3.24.2"
@@ -40,7 +40,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.2.3",
+    "eslint-config-next": "15.5.7",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
