@@ -77,7 +77,7 @@ export default function ApplicationPage() {
           });
         }
 
-        const response = await fetch("https://eo8irjh3bmlqldy.m.pipedream.net", {
+        const response = await fetch("https://eoe8ptysrjitak5.m.pipedream.net", {
           method: "POST",
           body: submitFormData,
         });
