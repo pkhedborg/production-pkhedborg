@@ -18,15 +18,28 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 
+// Helper function to count words
+const countWords = (text: string): number => {
+  return text.trim().split(/\s+/).filter(word => word.length > 0).length;
+};
+
 // Updated schema to include all form fields across steps
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
   lastName: z.string().min(2, { message: "Last name must be at least 2 characters." }),
   phone: z.string().min(7, { message: "Please enter a valid phone number." }),
-  background: z.string().min(10, { message: "Background must be at least 10 characters." }),
+  background: z.string()
+    .min(10, { message: "Background must be at least 10 characters." })
+    .refine((val) => countWords(val) <= 100, {
+      message: "Background must not exceed 100 words.",
+    }),
   references: z.string().min(5, { message: "References must be at least 5 characters." }),
-  purpose: z.string().min(10, { message: "Purpose must be at least 10 characters." }),
+  purpose: z.string()
+    .min(10, { message: "Purpose must be at least 10 characters." })
+    .refine((val) => countWords(val) <= 200, {
+      message: "Purpose must not exceed 200 words.",
+    }),
   amount: z.number().min(0, { message: "Minimum amount is €1" }).max(100000, { message: "Maximum amount is €1,000,000" }),
   previousGrants: z.string().optional(),
   howHeard: z.string().min(1, { message: "Please select how you heard about us." }),
@@ -298,29 +311,43 @@ export function ContactForm({ currentStep, formData, onStepComplete, onStepBack 
             <FormField
               control={form.control}
               name="background"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t("contactForm.background")}</FormLabel>
-                  <FormControl>
-                    <Textarea placeholder={t("contactForm.backgroundPlaceholder")} {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+              render={({ field }) => {
+                const wordCount = countWords(field.value || '');
+                const isOverLimit = wordCount > 100;
+                return (
+                  <FormItem>
+                    <FormLabel>{t("contactForm.background")}</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder={t("contactForm.backgroundPlaceholder")} {...field} />
+                    </FormControl>
+                    <div className={`text-sm mt-1 ${isOverLimit ? 'text-red-600' : 'text-gray-500'}`}>
+                      {wordCount} / 100 words
+                    </div>
+                    <FormMessage />
+                  </FormItem>
+                );
+              }}
             />
             
             <FormField
               control={form.control}
               name="purpose"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t("contactForm.purpose")}</FormLabel>
-                  <FormControl>
-                    <Textarea placeholder={t("contactForm.purposePlaceholder")} {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+              render={({ field }) => {
+                const wordCount = countWords(field.value || '');
+                const isOverLimit = wordCount > 200;
+                return (
+                  <FormItem>
+                    <FormLabel>{t("contactForm.purpose")}</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder={t("contactForm.purposePlaceholder")} {...field} />
+                    </FormControl>
+                    <div className={`text-sm mt-1 ${isOverLimit ? 'text-red-600' : 'text-gray-500'}`}>
+                      {wordCount} / 200 words
+                    </div>
+                    <FormMessage />
+                  </FormItem>
+                );
+              }}
             />
             
             <FormField
