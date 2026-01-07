@@ -148,7 +148,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center text-sm">
-          <p>&copy; 2025 Petra & Karl Erik Hedborg Foundation. All rights reserved.</p>
+          <p>&copy; 2026 Petra & Karl Erik Hedborg Foundation. All rights reserved.</p>
         </div>
       </div>
     </footer>
